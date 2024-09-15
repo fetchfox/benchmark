@@ -9,6 +9,7 @@ import {
   Document,
   getAi,
   getFetcher,
+  getExtractor ,
 } from 'foxtrot-ai';
 
 let cache = new DiskCache(
@@ -22,6 +23,7 @@ let cache = new DiskCache(
 // cache = null;
 
 const fetcher = getFetcher('fetch', { cache });
+const numLinks = 10;
 
 // For each extrator/model pair, we want:
 // - Accuracy (right answer is either ground truth, or majority vote)
@@ -183,15 +185,15 @@ const oldRedditCase = {
 
 const cases = [
   npmCase,
-  // wikipediaCase,
-  // pokedexCase,
-  // stackOverflowCase,
-  // imdbCase,
-  // mediumCase,
-  // hackerNewsCase,
-  // gutenbergCase,
-  // geniusCase,
-  // oldRedditCase,
+  wikipediaCase,
+  pokedexCase,
+  stackOverflowCase,
+  imdbCase,
+  mediumCase,
+  hackerNewsCase,
+  gutenbergCase,
+  geniusCase,
+  oldRedditCase,
 
 
   // These don't work well with fetch()
@@ -202,7 +204,7 @@ const cases = [
 const crawlerAi = 'openai:gpt-4o';
 
 const ais = [
-  'human',
+  // 'human',
 
   'openai:gpt-4o-mini',
   'openai:gpt-4o',
@@ -210,60 +212,96 @@ const ais = [
   'openai:gpt-4',
   'openai:gpt-4-turbo',
 
+  // 'mistral:mistral-large-latest',
+
   // 'anthropic:claude-3-5-sonnet-20240620',
+  // 'anthropic:claude-3-haiku-20240307',
+
+  // 'ollama:llama3.1:8b',
   // 'ollama:llama3.1:70b',
   // 'ollama:gemma2:27b',
+  // 'ollama:mistral-nemo',
+  // 'ollama:deepseek-coder-v2',
+
+  'ollama:codellama:13b',
+  'ollama:codellama:34b',
+  // 'ollama:codellama:70b',
+];
+
+const extractors = [
+  // 'basic',
+  'iterative-prompt',
+
+  // ['basic', getExtractor('basic')],
+  // ['iterative-prompt', getExtractor('iterative-prompt')],
 ];
 
 const voteWeights = {
   'human': 100,
-  'openai:gpt-4o': 1,
-  'openai:gpt-4o-mini': 1,
+
+  'openai:gpt-4o/basic': 2,
+  'openai:gpt-4o-mini/basic': 2,
+  'openai:gpt-4-turbo/basic': 1,
+
+  'openai:gpt-4o/iterative-prompt': 2,
+  'openai:gpt-4o-mini/iterative-prompt': 2,
+  'openai:gpt-4-turbo/iterative-prompt': 1,
 }
 
 const main = async () => {
   const scoreboard = {};
   for (const ai of ais) {
-    scoreboard[ai] = {
-      total: 0,
-      majority: 0,
-    };
+    for (const ex of extractors) {
+      const candidate = `${ai}/${ex}`;
+      scoreboard[candidate] = {
+        total: 0,
+        majority: 0,
+      };
+    }
   }
 
   const results = {};
   const usage = {};
   const took = {};
 
+  const total = cases.length * ais.length * extractors.length;
+  let count = 0;
+
   for (const cs of cases) {
-
     for (const ai of ais) {
-
       if (ai == 'human') {
         results['human'] = getHuman(cs);
         continue;
       }
 
-      console.log('');
-      console.log('');
-      console.log(`== Evaluating ${cs.url} -> ${ai}  ==`);
+      for (const ex of extractors) {
+        console.log('');
+        console.log('');
+        console.log(`Evaluating ${cs.url} -> ${ai}/${ex} (${++count}/${total})`);
 
-      const [r, u, t] = await evaluate(cs, ai);
-      results[ai] = r;
-      if (!usage[ai]) {
-        usage[ai] = u;
-      } else {
-        usage[ai].output += u.output;
-        usage[ai].input += u.input;
-        usage[ai].total += u.total;
-      }
-      if (!took[ai]) {
-        took[ai] = t;
-      } else {
-        took[ai] += t;
+        const candidate = `${ai}/${ex}`;
+
+        const [r, u, t] = await evaluate(cs, ex, ai);
+        results[candidate] = r;
+        if (!usage[candidate]) {
+          usage[candidate] = u;
+        } else {
+          usage[candidate].output += u.output;
+          usage[candidate].input += u.input;
+          usage[candidate].total += u.total;
+        }
+        if (!took[candidate]) {
+          took[candidate] = t;
+        } else {
+          took[candidate] += t;
+        }
       }
     }
 
-    const numItems = results[ais[0]].length;
+    const key = `${ais[0]}/${extractors[0]}`;
+    console.log(key);
+    const first = results[key];
+    const numItems = first.length;
 
     for (let i = 0; i < numItems; i++) {
       const majority = {};
@@ -271,11 +309,14 @@ const main = async () => {
       for (const question of cs.questions) {
         const votes = {};
         for (const ai of ais) {
-          const weight = voteWeights[ai];
-          if (!weight) continue;
-          const answer = results[ai][i][question] || '(not found)';
-          votes[answer] ||= 0;
-          votes[answer] += weight;
+          for (const ex of extractors) {
+            const candidate = `${ai}/${ex}`;
+            const weight = voteWeights[candidate];
+            if (!weight) continue;
+            const answer = results[candidate][i][question] || '(not found)';
+            votes[answer] ||= 0;
+            votes[answer] += weight;
+          }
         }
 
         let best = 0;
@@ -288,7 +329,7 @@ const main = async () => {
       }
 
       console.log('');
-      const item = results[ais[0]][i];
+      const item = first[i];
       const url = (item.source ? item.source().url : '?');
       console.log('majority answers for', url);
       console.log(JSON.stringify(majority, null, 2));
@@ -301,10 +342,13 @@ const main = async () => {
 
       for (const question of cs.questions) {
         for (const ai of ais) {
-          const answer = results[ai][i][question] || '(not found)';
-          scoreboard[ai].total++;
-          if (answer == majority[question]) {
-            scoreboard[ai].majority++;
+          for (const ex of extractors) {
+            const candidate = `${ai}/${ex}`;
+            const answer = results[candidate][i][question] || '(not found)';
+            scoreboard[candidate].total++;
+            if (answer == majority[question]) {
+              scoreboard[candidate].majority++;
+            }
           }
         }
       }
@@ -319,8 +363,9 @@ const main = async () => {
   console.log(JSON.stringify(took, null, 2));
 }
 
-const evaluate = async (cs, aiStr) => {
+const evaluate = async (cs, exStr, aiStr) => {
   const ai = getAi(aiStr, { cache });
+  const ex = getExtractor(exStr, { ai, cache});
   const fetcher = getFetcher('fetch', { cache });
   const results = [];
 
@@ -328,11 +373,11 @@ const evaluate = async (cs, aiStr) => {
 
   let count = 0;
 
-  const links = await getLinks(cs.url, cs.crawl, 10);
+  const links = await getLinks(cs.url, cs.crawl, numLinks);
 
   for (const link of links) {
     console.log(`- ${link.url} -> ${aiStr}`);
-    const ex = new BasicExtractor(ai, { fetcher, cache });
+    // const ex = new BasicExtractor({ ai, fetcher, cache });
 
     let doc;
     const saved = loadData('docs', ['doc', link.url]);
@@ -340,13 +385,15 @@ const evaluate = async (cs, aiStr) => {
       doc = new Document();
       doc.loadData(saved);
     } else {
-      const doc = await fetcher.fetch(link.url);
+      doc = await fetcher.fetch(link.url);
       saveData('docs', ['doc', link.url], doc.dump());
     }
 
     const item = await ex.one(doc, cs.questions);
     console.log(item?.source().url + ' ->');
-    console.log(item);
+    for (const q in item) {
+      console.log(`\t- ${'' + item[q].replaceAll('\n', '').substr(0, 80) + (item[q].length > 80 ? '...' : '')}`);
+    }
 
     results.push(item || {});
   }
@@ -356,7 +403,7 @@ const evaluate = async (cs, aiStr) => {
 }
 
 const getLinks = async (url, prompt, limit, save) => {
-  const saved = loadData('links', ['link', url, prompt]);
+  const saved = loadData('links', ['link', url, prompt, limit]);
   if (saved) {
     return saved;
   }
@@ -365,7 +412,7 @@ const getLinks = async (url, prompt, limit, save) => {
   const resp = await crawler.all(url, prompt, { limit });
   const links = resp.map(x => x.link);
 
-  saveData('links', ['link', url, prompt], links);
+  saveData('links', ['link', url, prompt, limit], links);
 
   return links;
 }
