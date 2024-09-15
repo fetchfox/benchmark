@@ -1,0 +1,10 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Chikorita",
+  "data": {
+    "What is the name of this Pokemon?": "Chikorita",
+    "What is the Pokedex index number? Format: 4 digit number with leading zeros": "0152",
+    "What is the type of this Pokemon?": "Grass",
+    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "N/A",
+    "What is the next evolution of this Pokemon? Format: name only. Reply N/A if none": "Bayleef"
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "url": "https://news.ycombinator.com/item?id=41486107",
+  "body": "<html lang=\"en\" op=\"item\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" type=\"text/css\" href=\"news.css?rJWyZTUrrkHPi9ph1EY6\">\n        <link rel=\"icon\" href=\"y18.svg\">\n    <link rel=\"canonical\" href=\"https://news.ycombinator.com/item?id=41486107\"/>            <title>Build Simple Fuzzer (2020) | Hacker News</title></head><body><center><table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">\n        <tr><td bgcolor=\"#ff6600\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"padding:2px\"><tr><td style=\"width:18px;padding-right:4px\"><a href=\"https://news.ycombinator.com\"><img src=\"y18.svg\" width=\"18\" height=\"18\" style=\"border:1px white solid; display:block\"></a></td>\n                  <td style=\"line-height:12pt; height:10px;\"><span class=\"pagetop\"><b class=\"hnname\"><a href=\"news\">Hacker News</a></b>\n                            <a href=\"newest\">new</a> | <a href=\"front\">past</a> | <a href=\"newcomments\">comments</a> | <a href=\"ask\">ask</a> | <a href=\"show\">show</a> | <a href=\"jobs\">jobs</a> | <a href=\"submit\" rel=\"nofollow\">submit</a>            </span></td><td style=\"text-align:right;padding-right:4px;\"><span class=\"pagetop\">\n                              <a href=\"login?goto=item%3Fid%3D41486107\">login</a>\n                          </span></td>\n              </tr></table></td></tr>\n<tr id=\"pagespace\" title=\"Build Simple Fuzzer (2020)\" style=\"height:10px\"></tr><tr><td><table class=\"fatitem\" border=\"0\">\n        <tr class='athing' id='41486107'>\n      <td align=\"right\" valign=\"top\" class=\"title\"><span class=\"rank\"></span></td>      <td valign=\"top\" class=\"votelinks\"><center><a id='up_41486107' href='vote?id=41486107&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center></td><td class=\"title\"><span class=\"titleline\"><a href=\"https://carstein.github.io/fuzzing/2020/04/18/writing-simple-fuzzer-1.html\">Build Simple Fuzzer (2020)</a><span class=\"sitebit comhead\"> (<a href=\"from?site=carstein.github.io\"><span class=\"sitestr\">carstein.github.io</span></a>)</span></span></td></tr><tr><td colspan=\"2\"></td><td class=\"subtext\"><span class=\"subline\">\n          <span class=\"score\" id=\"score_41486107\">42 points</span> by <a href=\"user?id=todsacerdoti\" class=\"hnuser\">todsacerdoti</a> <span class=\"age\" title=\"2024-09-09T07:03:40.000000Z\"><a href=\"item?id=41486107\">9 hours ago</a></span> <span id=\"unv_41486107\"></span> | <a href=\"hide?id=41486107&amp;goto=item%3Fid%3D41486107\">hide</a> | <a href=\"https://hn.algolia.com/?query=Build%20Simple%20Fuzzer&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0\" class=\"hnpast\">past</a> | <a href=\"fave?id=41486107&amp;auth=6ca2a39e87bb9d4a8db778091f02f02190dab3ee\">favorite</a> | <a href=\"item?id=41486107\">8&nbsp;comments</a>        </span>\n              </td></tr>\n            <tr><td style=\"height:10px\"></td></tr><tr><td colspan=\"2\"></td><td><form action=\"comment\" method=\"post\"><input type=\"hidden\" name=\"parent\" value=\"41486107\"><input type=\"hidden\" name=\"goto\" value=\"item?id=41486107\"><input type=\"hidden\" name=\"hmac\" value=\"b1b627fe699c389a3cc952e835d592458ff250b9\"><textarea name=\"text\" rows=\"8\" cols=\"80\" wrap=\"virtual\"></textarea><br><br>\n<input type=\"submit\" value=\"add comment\"></form></td></tr>  </table><br><br><table border=\"0\" class='comment-tree'>\n            <tr class='athing comtr' id='41531723'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531723' href='vote?id=41531723&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T14:45:45.000000Z\"><a href=\"item?id=41531723\">6 hours ago</a></span> <span id=\"unv_41531723\"></span>          <span class='navs'>\n             | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41531723\" n=\"5\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">I&#x27;ve followed similar approach for building a REST API fuzzer for the past 3 years: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Endava&#x2F;cats\">https:&#x2F;&#x2F;github.com&#x2F;Endava&#x2F;cats</a>. Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it&#x27;s java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531723&amp;goto=item%3Fid%3D41486107%2341531723\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41532690'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41532690' href='vote?id=41532690&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=jonaslejon\" class=\"hnuser\">jonaslejon</a> <span class=\"age\" title=\"2024-09-13T16:25:10.000000Z\"><a href=\"item?id=41532690\">4 hours ago</a></span> <span id=\"unv_41532690\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41532690\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: <a href=\"https:&#x2F;&#x2F;gitlab.com&#x2F;michenriksen&#x2F;jdam\" rel=\"nofollow\">https:&#x2F;&#x2F;gitlab.com&#x2F;michenriksen&#x2F;jdam</a></div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41532690&amp;goto=item%3Fid%3D41486107%2341532690\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41534771'><td><table border='0'>  <tr>    <td class='ind' indent='2'><img src=\"s.gif\" height=\"1\" width=\"80\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41534771' href='vote?id=41534771&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T20:23:17.000000Z\"><a href=\"item?id=41534771\">44 minutes ago</a></span> <span id=\"unv_41534771\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a> | <a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41534771\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Thanks for the link. I&#x27;m always looking for ways to extend and enrich it, so it&#x27;s good to discover similar tools.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41534771&amp;goto=item%3Fid%3D41486107%2341534771\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                  <tr class='athing comtr' id='41533315'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41533315' href='vote?id=41533315&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=otteromkram\" class=\"hnuser\">otteromkram</a> <span class=\"age\" title=\"2024-09-13T17:32:30.000000Z\"><a href=\"item?id=41533315\">3 hours ago</a></span> <span id=\"unv_41533315\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">prev</a> | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41533315\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41533315&amp;goto=item%3Fid%3D41486107%2341533315\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41534774'><td><table border='0'>  <tr>    <td class='ind' indent='2'><img src=\"s.gif\" height=\"1\" width=\"80\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41534774' href='vote?id=41534774&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T20:23:46.000000Z\"><a href=\"item?id=41534774\">43 minutes ago</a></span> <span id=\"unv_41534774\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41534774\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Thanks.I&#x27;ll check all links.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41534774&amp;goto=item%3Fid%3D41486107%2341534774\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                        <tr class='athing comtr' id='41531856'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531856' href='vote?id=41531856&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ramon156\" class=\"hnuser\">ramon156</a> <span class=\"age\" title=\"2024-09-13T15:00:00.000000Z\"><a href=\"item?id=41531856\">6 hours ago</a></span> <span id=\"unv_41531856\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">prev</a> | <a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41531856\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Link to the next page is broken, it doesn&#x27;t add the &#x2F;fuzzing&#x2F; prefix. Cool series nonetheless!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531856&amp;goto=item%3Fid%3D41486107%2341531856\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n            <tr class='athing comtr' id='41531993'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531993' href='vote?id=41531993&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=merkle\" class=\"hnuser\">merkle</a> <span class=\"age\" title=\"2024-09-13T15:15:12.000000Z\"><a href=\"item?id=41531993\">5 hours ago</a></span> <span id=\"unv_41531993\"></span>          <span class='navs'>\n             | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">prev</a> <a class=\"togg clicky\" id=\"41531993\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">It is just for me or it is really funny that he writes about fuzzing in his blog and his name is &quot;Michal Melewski&quot;? It is almost &quot;Michał Zalewski&quot;!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531993&amp;goto=item%3Fid%3D41486107%2341531993\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41532333'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41532333' href='vote?id=41532333&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=withzombies\" class=\"hnuser\">withzombies</a> <span class=\"age\" title=\"2024-09-13T15:49:55.000000Z\"><a href=\"item?id=41532333\">5 hours ago</a></span> <span id=\"unv_41532333\"></span>          <span class='navs'>\n             | <a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">parent</a> <a class=\"togg clicky\" id=\"41532333\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41532333&amp;goto=item%3Fid%3D41486107%2341532333\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                  </table>\n  <br><br>\n</td></tr>\n<tr><td><img src=\"s.gif\" height=\"10\" width=\"0\"><table width=\"100%\" cellspacing=\"0\" cellpadding=\"1\"><tr><td bgcolor=\"#ff6600\"></td></tr></table><br>\n<center><span class=\"yclinks\"><a href=\"newsguidelines.html\">Guidelines</a> | <a href=\"newsfaq.html\">FAQ</a> | <a href=\"lists\">Lists</a> | <a href=\"https://github.com/HackerNews/API\">API</a> | <a href=\"security.html\">Security</a> | <a href=\"https://www.ycombinator.com/legal/\">Legal</a> | <a href=\"https://www.ycombinator.com/apply/\">Apply to YC</a> | <a href=\"mailto:hn@ycombinator.com\">Contact</a></span><br><br>\n<form method=\"get\" action=\"//hn.algolia.com/\">Search: <input type=\"text\" name=\"q\" size=\"17\" autocorrect=\"off\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\"></form></center></td></tr>      </table></center></body>\n      <script type='text/javascript' src='hn.js?rJWyZTUrrkHPi9ph1EY6'></script>\n  </html>\n",
+  "html": "<html lang=\"en\" op=\"item\"><head><meta name=\"referrer\" content=\"origin\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" type=\"text/css\" href=\"news.css?rJWyZTUrrkHPi9ph1EY6\">\n        <link rel=\"icon\" href=\"y18.svg\">\n    <link rel=\"canonical\" href=\"https://news.ycombinator.com/item?id=41486107\"/>            <title>Build Simple Fuzzer (2020) | Hacker News</title></head><body><center><table id=\"hnmain\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"85%\" bgcolor=\"#f6f6ef\">\n        <tr><td bgcolor=\"#ff6600\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"padding:2px\"><tr><td style=\"width:18px;padding-right:4px\"><a href=\"https://news.ycombinator.com\"><img src=\"y18.svg\" width=\"18\" height=\"18\" style=\"border:1px white solid; display:block\"></a></td>\n                  <td style=\"line-height:12pt; height:10px;\"><span class=\"pagetop\"><b class=\"hnname\"><a href=\"news\">Hacker News</a></b>\n                            <a href=\"newest\">new</a> | <a href=\"front\">past</a> | <a href=\"newcomments\">comments</a> | <a href=\"ask\">ask</a> | <a href=\"show\">show</a> | <a href=\"jobs\">jobs</a> | <a href=\"submit\" rel=\"nofollow\">submit</a>            </span></td><td style=\"text-align:right;padding-right:4px;\"><span class=\"pagetop\">\n                              <a href=\"login?goto=item%3Fid%3D41486107\">login</a>\n                          </span></td>\n              </tr></table></td></tr>\n<tr id=\"pagespace\" title=\"Build Simple Fuzzer (2020)\" style=\"height:10px\"></tr><tr><td><table class=\"fatitem\" border=\"0\">\n        <tr class='athing' id='41486107'>\n      <td align=\"right\" valign=\"top\" class=\"title\"><span class=\"rank\"></span></td>      <td valign=\"top\" class=\"votelinks\"><center><a id='up_41486107' href='vote?id=41486107&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center></td><td class=\"title\"><span class=\"titleline\"><a href=\"https://carstein.github.io/fuzzing/2020/04/18/writing-simple-fuzzer-1.html\">Build Simple Fuzzer (2020)</a><span class=\"sitebit comhead\"> (<a href=\"from?site=carstein.github.io\"><span class=\"sitestr\">carstein.github.io</span></a>)</span></span></td></tr><tr><td colspan=\"2\"></td><td class=\"subtext\"><span class=\"subline\">\n          <span class=\"score\" id=\"score_41486107\">42 points</span> by <a href=\"user?id=todsacerdoti\" class=\"hnuser\">todsacerdoti</a> <span class=\"age\" title=\"2024-09-09T07:03:40.000000Z\"><a href=\"item?id=41486107\">9 hours ago</a></span> <span id=\"unv_41486107\"></span> | <a href=\"hide?id=41486107&amp;goto=item%3Fid%3D41486107\">hide</a> | <a href=\"https://hn.algolia.com/?query=Build%20Simple%20Fuzzer&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0\" class=\"hnpast\">past</a> | <a href=\"fave?id=41486107&amp;auth=6ca2a39e87bb9d4a8db778091f02f02190dab3ee\">favorite</a> | <a href=\"item?id=41486107\">8&nbsp;comments</a>        </span>\n              </td></tr>\n            <tr><td style=\"height:10px\"></td></tr><tr><td colspan=\"2\"></td><td><form action=\"comment\" method=\"post\"><input type=\"hidden\" name=\"parent\" value=\"41486107\"><input type=\"hidden\" name=\"goto\" value=\"item?id=41486107\"><input type=\"hidden\" name=\"hmac\" value=\"b1b627fe699c389a3cc952e835d592458ff250b9\"><textarea name=\"text\" rows=\"8\" cols=\"80\" wrap=\"virtual\"></textarea><br><br>\n<input type=\"submit\" value=\"add comment\"></form></td></tr>  </table><br><br><table border=\"0\" class='comment-tree'>\n            <tr class='athing comtr' id='41531723'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531723' href='vote?id=41531723&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T14:45:45.000000Z\"><a href=\"item?id=41531723\">6 hours ago</a></span> <span id=\"unv_41531723\"></span>          <span class='navs'>\n             | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41531723\" n=\"5\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">I&#x27;ve followed similar approach for building a REST API fuzzer for the past 3 years: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Endava&#x2F;cats\">https:&#x2F;&#x2F;github.com&#x2F;Endava&#x2F;cats</a>. Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it&#x27;s java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531723&amp;goto=item%3Fid%3D41486107%2341531723\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41532690'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41532690' href='vote?id=41532690&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=jonaslejon\" class=\"hnuser\">jonaslejon</a> <span class=\"age\" title=\"2024-09-13T16:25:10.000000Z\"><a href=\"item?id=41532690\">4 hours ago</a></span> <span id=\"unv_41532690\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41532690\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: <a href=\"https:&#x2F;&#x2F;gitlab.com&#x2F;michenriksen&#x2F;jdam\" rel=\"nofollow\">https:&#x2F;&#x2F;gitlab.com&#x2F;michenriksen&#x2F;jdam</a></div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41532690&amp;goto=item%3Fid%3D41486107%2341532690\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41534771'><td><table border='0'>  <tr>    <td class='ind' indent='2'><img src=\"s.gif\" height=\"1\" width=\"80\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41534771' href='vote?id=41534771&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T20:23:17.000000Z\"><a href=\"item?id=41534771\">44 minutes ago</a></span> <span id=\"unv_41534771\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a> | <a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41534771\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Thanks for the link. I&#x27;m always looking for ways to extend and enrich it, so it&#x27;s good to discover similar tools.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41534771&amp;goto=item%3Fid%3D41486107%2341534771\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                  <tr class='athing comtr' id='41533315'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41533315' href='vote?id=41533315&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=otteromkram\" class=\"hnuser\">otteromkram</a> <span class=\"age\" title=\"2024-09-13T17:32:30.000000Z\"><a href=\"item?id=41533315\">3 hours ago</a></span> <span id=\"unv_41533315\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">prev</a> | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41533315\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41533315&amp;goto=item%3Fid%3D41486107%2341533315\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41534774'><td><table border='0'>  <tr>    <td class='ind' indent='2'><img src=\"s.gif\" height=\"1\" width=\"80\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41534774' href='vote?id=41534774&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a> <span class=\"age\" title=\"2024-09-13T20:23:46.000000Z\"><a href=\"item?id=41534774\">43 minutes ago</a></span> <span id=\"unv_41534774\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a> | <a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">parent</a> | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41534774\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Thanks.I&#x27;ll check all links.</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41534774&amp;goto=item%3Fid%3D41486107%2341534774\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                        <tr class='athing comtr' id='41531856'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531856' href='vote?id=41531856&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=ramon156\" class=\"hnuser\">ramon156</a> <span class=\"age\" title=\"2024-09-13T15:00:00.000000Z\"><a href=\"item?id=41531856\">6 hours ago</a></span> <span id=\"unv_41531856\"></span>          <span class='navs'>\n             | <a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">prev</a> | <a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">next</a> <a class=\"togg clicky\" id=\"41531856\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">Link to the next page is broken, it doesn&#x27;t add the &#x2F;fuzzing&#x2F; prefix. Cool series nonetheless!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531856&amp;goto=item%3Fid%3D41486107%2341531856\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n            <tr class='athing comtr' id='41531993'><td><table border='0'>  <tr>    <td class='ind' indent='0'><img src=\"s.gif\" height=\"1\" width=\"0\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41531993' href='vote?id=41531993&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=merkle\" class=\"hnuser\">merkle</a> <span class=\"age\" title=\"2024-09-13T15:15:12.000000Z\"><a href=\"item?id=41531993\">5 hours ago</a></span> <span id=\"unv_41531993\"></span>          <span class='navs'>\n             | <a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">prev</a> <a class=\"togg clicky\" id=\"41531993\" n=\"2\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">It is just for me or it is really funny that he writes about fuzzing in his blog and his name is &quot;Michal Melewski&quot;? It is almost &quot;Michał Zalewski&quot;!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41531993&amp;goto=item%3Fid%3D41486107%2341531993\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                <tr class='athing comtr' id='41532333'><td><table border='0'>  <tr>    <td class='ind' indent='1'><img src=\"s.gif\" height=\"1\" width=\"40\"></td><td valign=\"top\" class=\"votelinks\">\n      <center><a id='up_41532333' href='vote?id=41532333&amp;how=up&amp;goto=item%3Fid%3D41486107'><div class='votearrow' title='upvote'></div></a></center>    </td><td class=\"default\"><div style=\"margin-top:2px; margin-bottom:-10px;\"><span class=\"comhead\">\n          <a href=\"user?id=withzombies\" class=\"hnuser\">withzombies</a> <span class=\"age\" title=\"2024-09-13T15:49:55.000000Z\"><a href=\"item?id=41532333\">5 hours ago</a></span> <span id=\"unv_41532333\"></span>          <span class='navs'>\n             | <a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">parent</a> <a class=\"togg clicky\" id=\"41532333\" n=\"1\" href=\"javascript:void(0)\">[–]</a><span class=\"onstory\"></span>          </span>\n                  </span></div><br><div class=\"comment\">\n                  <div class=\"commtext c00\">All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!</div>\n              <div class='reply'>        <p><font size=\"1\">\n                      <u><a href=\"reply?id=41532333&amp;goto=item%3Fid%3D41486107%2341532333\" rel=\"nofollow\">reply</a></u>\n                  </font>\n      </div></div></td></tr>\n        </table></td></tr>\n                  </table>\n  <br><br>\n</td></tr>\n<tr><td><img src=\"s.gif\" height=\"10\" width=\"0\"><table width=\"100%\" cellspacing=\"0\" cellpadding=\"1\"><tr><td bgcolor=\"#ff6600\"></td></tr></table><br>\n<center><span class=\"yclinks\"><a href=\"newsguidelines.html\">Guidelines</a> | <a href=\"newsfaq.html\">FAQ</a> | <a href=\"lists\">Lists</a> | <a href=\"https://github.com/HackerNews/API\">API</a> | <a href=\"security.html\">Security</a> | <a href=\"https://www.ycombinator.com/legal/\">Legal</a> | <a href=\"https://www.ycombinator.com/apply/\">Apply to YC</a> | <a href=\"mailto:hn@ycombinator.com\">Contact</a></span><br><br>\n<form method=\"get\" action=\"//hn.algolia.com/\">Search: <input type=\"text\" name=\"q\" size=\"17\" autocorrect=\"off\" spellcheck=\"false\" autocapitalize=\"off\" autocomplete=\"off\"></form></center></td></tr>      </table></center></body>\n      <script type='text/javascript' src='hn.js?rJWyZTUrrkHPi9ph1EY6'></script>\n  </html>\n",
+  "text": "        Build Simple Fuzzer (2020) | Hacker News    Hacker News  new | past | comments | ask | show | jobs | submit   login          Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:             Build Simple Fuzzer (2020) | Hacker News Build Simple Fuzzer (2020) | Hacker News    Hacker News  new | past | comments | ask | show | jobs | submit   login          Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:        Hacker News  new | past | comments | ask | show | jobs | submit   login          Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:      Hacker News  new | past | comments | ask | show | jobs | submit   login          Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:     Hacker News  new | past | comments | ask | show | jobs | submit   login          Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:     Hacker News  new | past | comments | ask | show | jobs | submit   login     Hacker News  new | past | comments | ask | show | jobs | submit   login     Hacker News  new | past | comments | ask | show | jobs | submit   login     Hacker News  new | past | comments | ask | show | jobs | submit   login     Hacker News  new | past | comments | ask | show | jobs | submit   login     Hacker News  new | past | comments | ask | show | jobs | submit  Hacker News  new | past | comments | ask | show | jobs | submit  Hacker News Hacker News new past comments ask show jobs submit  login   login  login      Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                         ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply              Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                   Build Simple Fuzzer (2020) ( carstein.github.io )   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments                   Build Simple Fuzzer (2020) ( carstein.github.io )     Build Simple Fuzzer (2020) ( carstein.github.io ) Build Simple Fuzzer (2020) ( carstein.github.io ) Build Simple Fuzzer (2020) ( carstein.github.io ) carstein.github.io carstein.github.io   42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments    42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments    42 points by todsacerdoti  9 hours ago   | hide | past | favorite | 8 comments  42 points todsacerdoti 9 hours ago 9 hours ago hide past favorite 8 comments                                   ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply            ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply            jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply            ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply            otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply            ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply            ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply            merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply            withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply            ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply           ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply           ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply          ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply          ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply          ludovicianul  6 hours ago    | next  [–]      I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply    ludovicianul  6 hours ago    | next  [–]     ludovicianul  6 hours ago    | next  [–]    ludovicianul 6 hours ago 6 hours ago | next  [–]   next [–]  I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey.    reply   I've followed similar approach for building a REST API fuzzer for the past 3 years: https://github.com/Endava/cats . Fuzz testing is still not widely adopted considering the obvious benefits and usually minimum setup time. Even if it's java, getting it to native code was a must, so I had to rewrite it from spring to quarkus to get native image compilation out of the box. And focus on the performance bit to be able to run large number of mutation even for large json payloads. Quite a journey. https://github.com/Endava/cats   reply    reply    reply  reply reply        jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply           jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply           jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply          jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply          jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply          jonaslejon  4 hours ago    | parent | next  [–]      Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply    jonaslejon  4 hours ago    | parent | next  [–]     jonaslejon  4 hours ago    | parent | next  [–]    jonaslejon 4 hours ago 4 hours ago | parent | next  [–]   parent next [–]  Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam    reply   Nice tool! Will check it out. I have used jdam in the past to fuzz JSON: https://gitlab.com/michenriksen/jdam https://gitlab.com/michenriksen/jdam   reply    reply    reply  reply reply        ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply           ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply           ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply          ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply          ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply          ludovicianul  44 minutes ago    | root | parent | next  [–]      Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply    ludovicianul  44 minutes ago    | root | parent | next  [–]     ludovicianul  44 minutes ago    | root | parent | next  [–]    ludovicianul 44 minutes ago 44 minutes ago | root | parent | next  [–]   root parent next [–]  Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.    reply   Thanks for the link. I'm always looking for ways to extend and enrich it, so it's good to discover similar tools.   reply    reply    reply  reply reply        otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply           otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply           otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply          otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply          otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply          otteromkram  3 hours ago    | parent | prev | next  [–]      Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply    otteromkram  3 hours ago    | parent | prev | next  [–]     otteromkram  3 hours ago    | parent | prev | next  [–]    otteromkram 3 hours ago 3 hours ago | parent | prev | next  [–]   parent prev next [–]  Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.    reply   Looks cool! Just a heads up: a couple of the demo links in the main README lead to 404s.   reply    reply    reply  reply reply        ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply           ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply           ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply          ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply          ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply          ludovicianul  43 minutes ago    | root | parent | next  [–]      Thanks.I'll check all links.    reply    ludovicianul  43 minutes ago    | root | parent | next  [–]     ludovicianul  43 minutes ago    | root | parent | next  [–]    ludovicianul 43 minutes ago 43 minutes ago | root | parent | next  [–]   root parent next [–]  Thanks.I'll check all links.    reply   Thanks.I'll check all links.   reply    reply    reply  reply reply        ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply           ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply           ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply          ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply          ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply          ramon156  6 hours ago    | prev | next  [–]      Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply    ramon156  6 hours ago    | prev | next  [–]     ramon156  6 hours ago    | prev | next  [–]    ramon156 6 hours ago 6 hours ago | prev | next  [–]   prev next [–]  Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!    reply   Link to the next page is broken, it doesn't add the /fuzzing/ prefix. Cool series nonetheless!   reply    reply    reply  reply reply        merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply           merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply           merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply          merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply          merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply          merkle  5 hours ago    | prev  [–]      It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply    merkle  5 hours ago    | prev  [–]     merkle  5 hours ago    | prev  [–]    merkle 5 hours ago 5 hours ago | prev  [–]   prev [–]  It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!    reply   It is just for me or it is really funny that he writes about fuzzing in his blog and his name is \"Michal Melewski\"? It is almost \"Michał Zalewski\"!   reply    reply    reply  reply reply        withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply           withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply           withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply          withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply          withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply          withzombies  5 hours ago    | parent  [–]      All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply    withzombies  5 hours ago    | parent  [–]     withzombies  5 hours ago    | parent  [–]    withzombies 5 hours ago 5 hours ago | parent  [–]   parent [–]  All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!    reply   All the polish hackers are named Michał and have also worked together. I know Melewski and Zalewski have in the past!   reply    reply    reply  reply reply     Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:      Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:     Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact    Search:  Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact Guidelines FAQ Lists API Security Legal Apply to YC Contact Search: ",
+  "links": [
+    {
+      "id": 1,
+      "url": "https://news.ycombinator.com/",
+      "html": "<a href=\"https://news.ycombinator.com\"><img src=\"y18.svg\" width=\"18\" height=\"18\" style=\"border:1px white solid; display:block\"></a>",
+      "text": ""
+    },
+    {
+      "id": 2,
+      "url": "https://news.ycombinator.com/news",
+      "html": "<a href=\"news\">Hacker News</a>",
+      "text": "Hacker News"
+    },
+    {
+      "id": 3,
+      "url": "https://news.ycombinator.com/newest",
+      "html": "<a href=\"newest\">new</a>",
+      "text": "new"
+    },
+    {
+      "id": 4,
+      "url": "https://news.ycombinator.com/front",
+      "html": "<a href=\"front\">past</a>",
+      "text": "past"
+    },
+    {
+      "id": 5,
+      "url": "https://news.ycombinator.com/newcomments",
+      "html": "<a href=\"newcomments\">comments</a>",
+      "text": "comments"
+    },
+    {
+      "id": 6,
+      "url": "https://news.ycombinator.com/ask",
+      "html": "<a href=\"ask\">ask</a>",
+      "text": "ask"
+    },
+    {
+      "id": 7,
+      "url": "https://news.ycombinator.com/show",
+      "html": "<a href=\"show\">show</a>",
+      "text": "show"
+    },
+    {
+      "id": 8,
+      "url": "https://news.ycombinator.com/jobs",
+      "html": "<a href=\"jobs\">jobs</a>",
+      "text": "jobs"
+    },
+    {
+      "id": 9,
+      "url": "https://news.ycombinator.com/submit",
+      "html": "<a href=\"submit\" rel=\"nofollow\">submit</a>",
+      "text": "submit"
+    },
+    {
+      "id": 10,
+      "url": "https://news.ycombinator.com/login?goto=item%3Fid%3D41486107",
+      "html": "<a href=\"login?goto=item%3Fid%3D41486107\">login</a>",
+      "text": "login"
+    },
+    {
+      "id": 11,
+      "url": "https://news.ycombinator.com/vote?id=41486107&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41486107\" href=\"vote?id=41486107&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 12,
+      "url": "https://carstein.github.io/fuzzing/2020/04/18/writing-simple-fuzzer-1.html",
+      "html": "<a href=\"https://carstein.github.io/fuzzing/2020/04/18/writing-simple-fuzzer-1.html\">Build Simple Fuzzer (2020)</a>",
+      "text": "Build Simple Fuzzer (2020)"
+    },
+    {
+      "id": 13,
+      "url": "https://news.ycombinator.com/from?site=carstein.github.io",
+      "html": "<a href=\"from?site=carstein.github.io\"><span class=\"sitestr\">carstein.github.io</span></a>",
+      "text": "carstein.github.io"
+    },
+    {
+      "id": 14,
+      "url": "https://news.ycombinator.com/user?id=todsacerdoti",
+      "html": "<a href=\"user?id=todsacerdoti\" class=\"hnuser\">todsacerdoti</a>",
+      "text": "todsacerdoti"
+    },
+    {
+      "id": 15,
+      "url": "https://news.ycombinator.com/item?id=41486107",
+      "html": "<a href=\"item?id=41486107\">9 hours ago</a>",
+      "text": "9 hours ago"
+    },
+    {
+      "id": 16,
+      "url": "https://news.ycombinator.com/hide?id=41486107&goto=item%3Fid%3D41486107",
+      "html": "<a href=\"hide?id=41486107&amp;goto=item%3Fid%3D41486107\">hide</a>",
+      "text": "hide"
+    },
+    {
+      "id": 17,
+      "url": "https://hn.algolia.com/?query=Build%20Simple%20Fuzzer&type=story&dateRange=all&sort=byDate&storyText=false&prefix&page=0",
+      "html": "<a href=\"https://hn.algolia.com/?query=Build%20Simple%20Fuzzer&amp;type=story&amp;dateRange=all&amp;sort=byDate&amp;storyText=false&amp;prefix&amp;page=0\" class=\"hnpast\">past</a>",
+      "text": "past"
+    },
+    {
+      "id": 18,
+      "url": "https://news.ycombinator.com/fave?id=41486107&auth=6ca2a39e87bb9d4a8db778091f02f02190dab3ee",
+      "html": "<a href=\"fave?id=41486107&amp;auth=6ca2a39e87bb9d4a8db778091f02f02190dab3ee\">favorite</a>",
+      "text": "favorite"
+    },
+    {
+      "id": 19,
+      "url": "https://news.ycombinator.com/item?id=41486107",
+      "html": "<a href=\"item?id=41486107\">8&nbsp;comments</a>",
+      "text": "8 comments"
+    },
+    {
+      "id": 20,
+      "url": "https://news.ycombinator.com/vote?id=41531723&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41531723\" href=\"vote?id=41531723&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 21,
+      "url": "https://news.ycombinator.com/user?id=ludovicianul",
+      "html": "<a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a>",
+      "text": "ludovicianul"
+    },
+    {
+      "id": 22,
+      "url": "https://news.ycombinator.com/item?id=41531723",
+      "html": "<a href=\"item?id=41531723\">6 hours ago</a>",
+      "text": "6 hours ago"
+    },
+    {
+      "id": 23,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531856",
+      "html": "<a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 24,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41531723\" n=\"5\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 25,
+      "url": "https://github.com/Endava/cats",
+      "html": "<a href=\"https://github.com/Endava/cats\">https://github.com/Endava/cats</a>",
+      "text": "https://github.com/Endava/cats"
+    },
+    {
+      "id": 26,
+      "url": "https://news.ycombinator.com/reply?id=41531723&goto=item%3Fid%3D41486107%2341531723",
+      "html": "<a href=\"reply?id=41531723&amp;goto=item%3Fid%3D41486107%2341531723\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 27,
+      "url": "https://news.ycombinator.com/vote?id=41532690&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41532690\" href=\"vote?id=41532690&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 28,
+      "url": "https://news.ycombinator.com/user?id=jonaslejon",
+      "html": "<a href=\"user?id=jonaslejon\" class=\"hnuser\">jonaslejon</a>",
+      "text": "jonaslejon"
+    },
+    {
+      "id": 29,
+      "url": "https://news.ycombinator.com/item?id=41532690",
+      "html": "<a href=\"item?id=41532690\">4 hours ago</a>",
+      "text": "4 hours ago"
+    },
+    {
+      "id": 30,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531723",
+      "html": "<a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+      "text": "parent"
+    },
+    {
+      "id": 31,
+      "url": "https://news.ycombinator.com/item?id=41486107#41533315",
+      "html": "<a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 32,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41532690\" n=\"2\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 33,
+      "url": "https://gitlab.com/michenriksen/jdam",
+      "html": "<a href=\"https://gitlab.com/michenriksen/jdam\" rel=\"nofollow\">https://gitlab.com/michenriksen/jdam</a>",
+      "text": "https://gitlab.com/michenriksen/jdam"
+    },
+    {
+      "id": 34,
+      "url": "https://news.ycombinator.com/reply?id=41532690&goto=item%3Fid%3D41486107%2341532690",
+      "html": "<a href=\"reply?id=41532690&amp;goto=item%3Fid%3D41486107%2341532690\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 35,
+      "url": "https://news.ycombinator.com/vote?id=41534771&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41534771\" href=\"vote?id=41534771&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 36,
+      "url": "https://news.ycombinator.com/user?id=ludovicianul",
+      "html": "<a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a>",
+      "text": "ludovicianul"
+    },
+    {
+      "id": 37,
+      "url": "https://news.ycombinator.com/item?id=41534771",
+      "html": "<a href=\"item?id=41534771\">44 minutes ago</a>",
+      "text": "44 minutes ago"
+    },
+    {
+      "id": 38,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531723",
+      "html": "<a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a>",
+      "text": "root"
+    },
+    {
+      "id": 39,
+      "url": "https://news.ycombinator.com/item?id=41486107#41532690",
+      "html": "<a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+      "text": "parent"
+    },
+    {
+      "id": 40,
+      "url": "https://news.ycombinator.com/item?id=41486107#41533315",
+      "html": "<a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 41,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41534771\" n=\"1\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 42,
+      "url": "https://news.ycombinator.com/reply?id=41534771&goto=item%3Fid%3D41486107%2341534771",
+      "html": "<a href=\"reply?id=41534771&amp;goto=item%3Fid%3D41486107%2341534771\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 43,
+      "url": "https://news.ycombinator.com/vote?id=41533315&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41533315\" href=\"vote?id=41533315&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 44,
+      "url": "https://news.ycombinator.com/user?id=otteromkram",
+      "html": "<a href=\"user?id=otteromkram\" class=\"hnuser\">otteromkram</a>",
+      "text": "otteromkram"
+    },
+    {
+      "id": 45,
+      "url": "https://news.ycombinator.com/item?id=41533315",
+      "html": "<a href=\"item?id=41533315\">3 hours ago</a>",
+      "text": "3 hours ago"
+    },
+    {
+      "id": 46,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531723",
+      "html": "<a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+      "text": "parent"
+    },
+    {
+      "id": 47,
+      "url": "https://news.ycombinator.com/item?id=41486107#41532690",
+      "html": "<a href=\"#41532690\" class=\"clicky\" aria-hidden=\"true\">prev</a>",
+      "text": "prev"
+    },
+    {
+      "id": 48,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531856",
+      "html": "<a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 49,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41533315\" n=\"2\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 50,
+      "url": "https://news.ycombinator.com/reply?id=41533315&goto=item%3Fid%3D41486107%2341533315",
+      "html": "<a href=\"reply?id=41533315&amp;goto=item%3Fid%3D41486107%2341533315\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 51,
+      "url": "https://news.ycombinator.com/vote?id=41534774&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41534774\" href=\"vote?id=41534774&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 52,
+      "url": "https://news.ycombinator.com/user?id=ludovicianul",
+      "html": "<a href=\"user?id=ludovicianul\" class=\"hnuser\">ludovicianul</a>",
+      "text": "ludovicianul"
+    },
+    {
+      "id": 53,
+      "url": "https://news.ycombinator.com/item?id=41534774",
+      "html": "<a href=\"item?id=41534774\">43 minutes ago</a>",
+      "text": "43 minutes ago"
+    },
+    {
+      "id": 54,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531723",
+      "html": "<a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">root</a>",
+      "text": "root"
+    },
+    {
+      "id": 55,
+      "url": "https://news.ycombinator.com/item?id=41486107#41533315",
+      "html": "<a href=\"#41533315\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+      "text": "parent"
+    },
+    {
+      "id": 56,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531856",
+      "html": "<a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 57,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41534774\" n=\"1\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 58,
+      "url": "https://news.ycombinator.com/reply?id=41534774&goto=item%3Fid%3D41486107%2341534774",
+      "html": "<a href=\"reply?id=41534774&amp;goto=item%3Fid%3D41486107%2341534774\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 59,
+      "url": "https://news.ycombinator.com/vote?id=41531856&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41531856\" href=\"vote?id=41531856&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 60,
+      "url": "https://news.ycombinator.com/user?id=ramon156",
+      "html": "<a href=\"user?id=ramon156\" class=\"hnuser\">ramon156</a>",
+      "text": "ramon156"
+    },
+    {
+      "id": 61,
+      "url": "https://news.ycombinator.com/item?id=41531856",
+      "html": "<a href=\"item?id=41531856\">6 hours ago</a>",
+      "text": "6 hours ago"
+    },
+    {
+      "id": 62,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531723",
+      "html": "<a href=\"#41531723\" class=\"clicky\" aria-hidden=\"true\">prev</a>",
+      "text": "prev"
+    },
+    {
+      "id": 63,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531993",
+      "html": "<a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">next</a>",
+      "text": "next"
+    },
+    {
+      "id": 64,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41531856\" n=\"1\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 65,
+      "url": "https://news.ycombinator.com/reply?id=41531856&goto=item%3Fid%3D41486107%2341531856",
+      "html": "<a href=\"reply?id=41531856&amp;goto=item%3Fid%3D41486107%2341531856\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 66,
+      "url": "https://news.ycombinator.com/vote?id=41531993&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41531993\" href=\"vote?id=41531993&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 67,
+      "url": "https://news.ycombinator.com/user?id=merkle",
+      "html": "<a href=\"user?id=merkle\" class=\"hnuser\">merkle</a>",
+      "text": "merkle"
+    },
+    {
+      "id": 68,
+      "url": "https://news.ycombinator.com/item?id=41531993",
+      "html": "<a href=\"item?id=41531993\">5 hours ago</a>",
+      "text": "5 hours ago"
+    },
+    {
+      "id": 69,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531856",
+      "html": "<a href=\"#41531856\" class=\"clicky\" aria-hidden=\"true\">prev</a>",
+      "text": "prev"
+    },
+    {
+      "id": 70,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41531993\" n=\"2\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 71,
+      "url": "https://news.ycombinator.com/reply?id=41531993&goto=item%3Fid%3D41486107%2341531993",
+      "html": "<a href=\"reply?id=41531993&amp;goto=item%3Fid%3D41486107%2341531993\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 72,
+      "url": "https://news.ycombinator.com/vote?id=41532333&how=up&goto=item%3Fid%3D41486107",
+      "html": "<a id=\"up_41532333\" href=\"vote?id=41532333&amp;how=up&amp;goto=item%3Fid%3D41486107\"><div class=\"votearrow\" title=\"upvote\"></div></a>",
+      "text": ""
+    },
+    {
+      "id": 73,
+      "url": "https://news.ycombinator.com/user?id=withzombies",
+      "html": "<a href=\"user?id=withzombies\" class=\"hnuser\">withzombies</a>",
+      "text": "withzombies"
+    },
+    {
+      "id": 74,
+      "url": "https://news.ycombinator.com/item?id=41532333",
+      "html": "<a href=\"item?id=41532333\">5 hours ago</a>",
+      "text": "5 hours ago"
+    },
+    {
+      "id": 75,
+      "url": "https://news.ycombinator.com/item?id=41486107#41531993",
+      "html": "<a href=\"#41531993\" class=\"clicky\" aria-hidden=\"true\">parent</a>",
+      "text": "parent"
+    },
+    {
+      "id": 76,
+      "url": "javascript:void(0)",
+      "html": "<a class=\"togg clicky\" id=\"41532333\" n=\"1\" href=\"javascript:void(0)\">[–]</a>",
+      "text": "[–]"
+    },
+    {
+      "id": 77,
+      "url": "https://news.ycombinator.com/reply?id=41532333&goto=item%3Fid%3D41486107%2341532333",
+      "html": "<a href=\"reply?id=41532333&amp;goto=item%3Fid%3D41486107%2341532333\" rel=\"nofollow\">reply</a>",
+      "text": "reply"
+    },
+    {
+      "id": 78,
+      "url": "https://news.ycombinator.com/newsguidelines.html",
+      "html": "<a href=\"newsguidelines.html\">Guidelines</a>",
+      "text": "Guidelines"
+    },
+    {
+      "id": 79,
+      "url": "https://news.ycombinator.com/newsfaq.html",
+      "html": "<a href=\"newsfaq.html\">FAQ</a>",
+      "text": "FAQ"
+    },
+    {
+      "id": 80,
+      "url": "https://news.ycombinator.com/lists",
+      "html": "<a href=\"lists\">Lists</a>",
+      "text": "Lists"
+    },
+    {
+      "id": 81,
+      "url": "https://github.com/HackerNews/API",
+      "html": "<a href=\"https://github.com/HackerNews/API\">API</a>",
+      "text": "API"
+    },
+    {
+      "id": 82,
+      "url": "https://news.ycombinator.com/security.html",
+      "html": "<a href=\"security.html\">Security</a>",
+      "text": "Security"
+    },
+    {
+      "id": 83,
+      "url": "https://www.ycombinator.com/legal/",
+      "html": "<a href=\"https://www.ycombinator.com/legal/\">Legal</a>",
+      "text": "Legal"
+    },
+    {
+      "id": 84,
+      "url": "https://www.ycombinator.com/apply/",
+      "html": "<a href=\"https://www.ycombinator.com/apply/\">Apply to YC</a>",
+      "text": "Apply to YC"
+    },
+    {
+      "id": 85,
+      "url": "mailto:hn@ycombinator.com",
+      "html": "<a href=\"mailto:hn@ycombinator.com\">Contact</a>",
+      "text": "Contact"
+    }
+  ],
+  "resp": {
+    "url": "https://news.ycombinator.com/item?id=41486107",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "cache-control": "private; max-age=0",
+      "connection": "close",
+      "content-encoding": "gzip",
+      "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://cdnjs.cloudflare.com/; frame-src 'self' https://www.google.com/recaptcha/; style-src 'self' 'unsafe-inline'; img-src 'self' https://account.ycombinator.com; frame-ancestors 'self'",
+      "content-type": "text/html; charset=utf-8",
+      "date": "Fri, 13 Sep 2024 21:07:17 GMT",
+      "referrer-policy": "origin",
+      "server": "nginx",
+      "strict-transport-security": "max-age=31556900",
+      "transfer-encoding": "chunked",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "x-xss-protection": "1; mode=block"
+    }
+  },
+  "contentType": "text/html",
+  "req": {
+    "url": "https://news.ycombinator.com/item?id=41486107"
+  }
+}

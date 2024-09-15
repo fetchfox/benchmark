@@ -1,0 +1,10 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Togedemaru",
+  "data": {
+    "What is the name of this Pokemon?": "Togedemaru",
+    "What is the Pokedex index number? Format: 4 digit number with leading zeros": "0777",
+    "What is the type of this Pokemon?": "Electric / Steel",
+    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "N/A",
+    "What is the next evolution of this Pokemon? Format: name only. Reply N/A if none": "N/A"
+  }
+}

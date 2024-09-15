@@ -1,0 +1,10 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Yamask",
+  "data": {
+    "What is the name of this Pokemon?": "Yamask",
+    "What is the Pokedex index number? Format: 4 digit number with leading zeros": "0562",
+    "What is the type of this Pokemon?": "Ghost",
+    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "Yamask",
+    "What is the next evolution of this Pokemon? Format: name only. Reply N/A if none": "Cofagrigus"
+  }
+}

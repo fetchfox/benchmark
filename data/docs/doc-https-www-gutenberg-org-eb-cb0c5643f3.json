@@ -1,0 +1,385 @@
+{
+  "url": "https://www.gutenberg.org/ebooks/33283",
+  "body": "<!DOCTYPE html>\n<!--\nDON'T USE THIS PAGE FOR SCRAPING.\nSeriously. You'll only get your IP blocked.\nRead https://www.gutenberg.org/feeds/ to learn how to download Project\nGutenberg metadata much faster than by scraping.\n--><html lang=\"en\">\n\n\n\n\n<head>\n<style>\n.icon   { background: transparent url(/pics/sprite.png) 0 0 no-repeat; }\n.page_content a.subtle_link:link {color:currentColor; text-decoration: none;}\n.page_content a.subtle_link:hover {color:#003366}\n</style>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/pg-desktop-one.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/new_nav.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/style.css\">\n<script>//\nvar canonical_url   = \"http://www.gutenberg.org/ebooks/33283\";\nvar lang            = \"en\";\nvar msg_load_more   = \"Load More Results…\";\nvar page_mode       = \"screen\";\nvar dialog_title    = \"\";\nvar dialog_message  = \"\";\n//</script>\n<script src=\"/js/pg-two.js\"></script>\n<link rel=\"shortcut icon\" href=\"/gutenberg/favicon.ico\">\n<link rel=\"canonical\" href=\"http://www.gutenberg.org/ebooks/33283\">\n<link rel=\"search\" type=\"application/opensearchdescription+xml\" title=\"Search Project Gutenberg\" href=\"https://www.gutenberg.org/catalog/osd-books.xml\">\n<link rel=\"alternate nofollow\" type=\"application/atom+xml;profile=opds-catalog\" title=\"OPDS feed\" href=\"/ebooks/33283.opds\">\n<link rel=\"apple-touch-icon\" href=\"/gutenberg/apple-icon.png\">\n<meta name=\"viewport\" content=\"width=device-width\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta http-equiv=\"default-style\" content=\"text/css\">\n<meta name=\"title\" content=\"Calculus Made Easy by Silvanus P. Thompson\">\n<meta name=\"description\" content=\"Free kindle book and epub digitized and proofread by volunteers.\">\n<meta name=\"keywords\" content=\"ebook, ebooks, free ebooks, free books, book, books, audio books\">\n<meta name=\"classification\" content=\"public\">\n<meta property=\"og:title\" content=\"Calculus Made Easy by Silvanus P. Thompson\">\n<meta property=\"og:description\" content=\"Free kindle book and epub digitized and proofread by volunteers.\">\n<meta property=\"og:type\" content=\"book\">\n<meta property=\"og:image\" content=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\">\n<meta property=\"og:url\" content=\"http://www.gutenberg.org/ebooks/33283\">\n<meta property=\"og:site_name\" content=\"Project Gutenberg\">\n<meta property=\"fb:app_id\" content=\"115319388529183\">\n<meta name=\"twitter:card\" content=\"summary\">\n<meta name=\"twitter:site\" content=\"@gutenberg_new\">\n<meta name=\"twitter:image\" content=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\">\n<meta name=\"twitter:image:alt\" content=\"book cover image\">\n<title>Calculus Made Easy by Silvanus P. Thompson | Project Gutenberg</title>\n<link rel=\"alternate nofollow\" type=\"application/rdf+xml\" href=\"/ebooks/33283.rdf\">\n<style>\n.qrcode { background: transparent url(/cache/epub/33283/pg33283.qrcode.png) 0 0 no-repeat; }\n</style>\n<meta name=\"google\" content=\"notranslate\">\n</head>\n<body>\n<div class=\"container\">\n<nav>\n<!--<div id=\"main_logo\"> -->\n<a id=\"main_logo\" href=\"/\" class=\"no-hover\">\n<img src=\"/gutenberg/pg-logo-129x80.png\" alt=\"Project Gutenberg\" draggable=\"false\">\n</a>\n<!--\t</div>-->\n<div id=\"menu\">\n<label for=\"tm\" id=\"toggle-menu\">Menu<span class=\"drop-icon\">▾</span></label>\n<input type=\"checkbox\" id=\"tm\">\n<ul class=\"main-menu cf\">\n<li>\n<a href=\"/about/\">About\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm0\">▾</label>\n<input type=\"checkbox\" id=\"sm0\">\n<ul class=\"sub-menu\">\n<li><a href=\"/about/\">About Project Gutenberg</a></li>\n<li><a href=\"/policy/collection_development.html\">Collection Development</a></li>\n<li><a href=\"/about/contact_information.html\">Contact Us</a></li>\n<li><a href=\"/about/background/\">History &amp; Philosophy</a></li>\n<li><a href=\"/policy/permission.html\">Permissions &amp; License</a></li>\n<li><a href=\"/policy/privacy_policy.html\">Privacy Policy</a></li>\n<li><a href=\"/policy/terms_of_use.html\">Terms of Use</a></li>\n</ul>\n</li>\n<li>\n<a href=\"/ebooks/\">Search and Browse\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm8\">▾</label>\n<input type=\"checkbox\" id=\"sm8\">\n<ul class=\"sub-menu\">\n<li><a href=\"/ebooks/\">Book Search</a></li>\n<li><a href=\"/ebooks/bookshelf/\">Bookshelves</a></li>\n<li><a href=\"/browse/scores/top\">Frequently Downloaded</a></li>\n<li><a href=\"/ebooks/offline_catalogs.html\">Offline Catalogs</a></li>\n</ul>\n</li>\n<li>\n<a href=\"/help/\">Help\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm3\">▾</label>\n<input type=\"checkbox\" id=\"sm3\">\n<ul class=\"sub-menu\">\n<li><a href=\"/help/\">All help topics →</a></li>\n<li><a href=\"/help/copyright.html\">Copyright Procedures</a></li>\n<li><a href=\"/help/errata.html\">Errata, Fixes and Bug Reports</a></li>\n<li><a href=\"/help/file_formats.html\">File Formats</a></li>\n<li><a href=\"/help/faq.html\">Frequently Asked Questions</a></li>\n<li><a href=\"/policy/\">Policies →</a></li>\n<li><a href=\"/help/public_domain_ebook_submission.html\">Public Domain eBook Submission</a></li>\n<li><a href=\"/help/submitting_your_own_work.html\">Submitting Your Own Work</a></li>\n<li><a href=\"/help/mobile.html\">Tablets, Phones and eReaders</a></li>\n<li><a href=\"/attic/\">The Attic →</a></li>\n</ul>\n</li>\n<li><a href=\"/donate/\">Donate</a></li>\n</ul>\n</div>\n<div class=\"donate\">\n<div class=\"searchbox\">\n<form method=\"get\" action=\"/ebooks/search/\" accept-charset=\"utf-8\" enctype=\"multipart/form-data\" class=\"searchbox\">\n<input type=\"text\" value=\"\" id=\"menu-book-search\" name=\"query\" class=\"searchInput\" title=\"Quick search\" tabindex=\"20\" size=\"20\" maxlength=\"80\" placeholder=\"Quick search\">\n<input type=\"submit\" name=\"submit_search\" value=\"Go!\" style=\"vertical-align:middle;\">\n</form>\n</div>\n<form class=\"donatelink\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"new\">\n<p><a href=\"/donate/\">Donation</a></p>\n<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\n<input type=\"hidden\" name=\"hosted_button_id\" value=\"XKAL6BZL3YPSN\">\n<input class=\"donbtn\" type=\"image\" src=\"/pics/en_US.gif\" name=\"submit\" alt=\"Donate via PayPal\">\n</form>\n</div>\n</nav>\n<div class=\"page_content\" id=\"content\" itemscope=\"itemscope\" itemtype=\"http://schema.org/Book\">\n<div class=\"breadcrumbs noprint\">\n<ul itemscope=\"itemscope\" itemtype=\"https://schema.org/BreadcrumbList\">\n<li class=\"breadcrumb first\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/\" title=\"Go to the Main page.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">Project Gutenberg</span></a><meta itemprop=\"position\" content=\"0\">\n</li>\n<li class=\"breadcrumb next\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/ebooks/\" title=\"Start a new search.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">74,254 free eBooks</span></a><meta itemprop=\"position\" content=\"1\">\n</li>\n<li class=\"breadcrumb next\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/ebooks/author/36308\" title=\"Find more eBooks by the same author.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">7 by Silvanus P. Thompson</span></a><meta itemprop=\"position\" content=\"2\">\n</li>\n</ul>\n</div>\n<h1 itemprop=\"name\">Calculus Made Easy by Silvanus P. Thompson</h1>\n<div class=\"page-body\">\n<div property=\"dcterms:publisher\" itemprop=\"publisher\" content=\"Project Gutenberg\"></div>\n<div itemprop=\"bookFormat\" content=\"EBook\"></div>\n<div id=\"cover-social-wrapper\">\n<div id=\"cover\">\n<img class=\"cover-art\" src=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\" title=\"Book Cover\" alt=\"Book Cover\" itemprop=\"image\">\n</div>\n<div id=\"social\" class=\"noprint\">\n<ul>\n<li>\n<!-- toot without javascript -->\n<div class=\"social-button masto-share-button\">\n<a href=\"https://toot.kytta.dev/?text=Free%20book%20at%20Project%20Gutenberg%3A%20Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson%20http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Mastodon\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_masto\"></span>\n</a>\n</div>\n</li>\n<li>\n<!-- tweet without javascript -->\n<div class=\"social-button twitter-share-button\">\n<a href=\"https://twitter.com/share?url=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283&amp;text=Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson&amp;count=none&amp;lang=en&amp;related=gutenberg_new%3AProject%20Gutenberg%20New%20Books\" title=\"Share on Twitter\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_twitter\"></span>\n</a>\n</div>\n</li>\n<li>\n<div class=\"social-button fb-share-button\">\n<a href=\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Facebook\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_facebook\"></span>\n</a>\n</div>\n</li>\n<li>\n<a onclick=\"printpage()\" title=\"Print this page\"><span class=\"icon icon_print\"></span></a>\n</li>\n</ul>\n</div>\n<div id=\"qr\">\n<span class=\"qrcode qrcode-desktop\" title=\"Scan QR Code for this page.\"></span>\n</div>\n</div>\n<div id=\"tabs-wrapper\">\n<div id=\"tabs\">\n<div id=\"download\">\n<div about=\"[ebook:33283]\" rel=\"dcterms:hasFormat\">\n<h2>Read now or download (free!)</h2>\n<table class=\"files\">\n<colgroup>\n<col class=\"narrow\">\n<col>\n<col>\n<col>\n<col class=\"narrow noprint\">\n<col class=\"narrow noprint\">\n<col class=\"narrow noprint\">\n</colgroup>\n<tr>\n<th></th>\n<th>Choose how to read this book <span>\n<a href=\"/help/bibliographic_record.html#format\" title=\"Information about format.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noscreen\">Url</th>\n<th class=\"right\">Size</th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#Dropbox\" title=\"Information about Dropbox.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#Google_Drive\" title=\"Information about Google Drive.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#OneDrive\" title=\"Information about OneDrive.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n</tr>\n<tr class=\"even\" about=\"https://www.gutenberg.org/files/33283/33283-pdf.pdf\" typeof=\"pgterms:file\">\n<td><span class=\"icon icon_book\"></span></td>\n<td property=\"dcterms:format\" content=\"application/pdf\" datatype=\"dcterms:IMT\" class=\"unpadded icon_save\"><a href=\"/files/33283/33283-pdf.pdf\" type=\"application/pdf\" class=\"link\" title=\"Download\">PDF</a></td>\n<td class=\"noscreen\">https://www.gutenberg.org/files/33283/33283-pdf.pdf</td>\n<td class=\"right\" property=\"dcterms:extent\" content=\"1914481\">1.8 MB</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/dropbox/33283.pdf\" title=\"Send to Dropbox.\" rel=\"nofollow\"><span class=\"icon icon_dropbox\"></span></a>\n</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/gdrive/33283.pdf\" title=\"Send to Google Drive.\" rel=\"nofollow\"><span class=\"icon icon_gdrive\"></span></a>\n</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/msdrive/33283.pdf\" title=\"Send to OneDrive.\" rel=\"nofollow\"><span class=\"icon icon_msdrive\"></span></a>\n</td>\n</tr><tr class=\"even\" about=\"https://www.gutenberg.org/files/33283/33283-t/33283-t.tex\" typeof=\"pgterms:file\">\n<td><span class=\"icon icon_book\"></span></td>\n<td property=\"dcterms:format\" content=\"application/prs.tex\" datatype=\"dcterms:IMT\" class=\"unpadded icon_save\"><a href=\"/files/33283/33283-t/33283-t.tex\" type=\"application/prs.tex\" class=\"link\" title=\"Download\">TeX</a></td>\n<td class=\"noscreen\">https://www.gutenberg.org/files/33283/33283-t/33283-t.tex</td>\n<td class=\"right\" property=\"dcterms:extent\" content=\"404533\">395 kB</td>\n<td class=\"noprint\">\n</td>\n<td class=\"noprint\">\n</td>\n<td class=\"noprint\">\n</td>\n</tr>\n<tr class=\"even\">\n<td><span class=\"icon icon_folder\"></span></td>\n<td colspan=\"6\"><span class=\"small\">\nThere may be <a class=\"subtle_link\" rel=\"nofollow\" href=\"/files/33283/\">more files</a> related to this item.</span></td>\n</tr>\n</table>\n</div>\n</div> <!-- download -->\n<div id=\"more_stuff\">\n<h2 class=\"header\">Similar Books</h2>\n<div class=\"grayed navlink noprint\">\n<a rel=\"nofollow\" href=\"/ebooks/33283/also/\" accesskey=\"1\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_suggestion\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">Readers also downloaded…</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/102\" accesskey=\"2\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/459\" accesskey=\"3\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/478\" accesskey=\"4\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Science - General</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n</div> <!-- more stuff -->\n<div id=\"bibrec\">\n<div typeof=\"pgterms:ebook\" about=\"[ebook:33283]\">\n<h2>About this eBook <span>\n<a href=\"/help/bibliographic_record.html#Table:_Bibliographic_Record\" title=\"Information about Table: Bibliographic Record.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></h2>\n<table class=\"bibrec\">\n<colgroup>\n<col class=\"narrow\">\n<col>\n</colgroup>\n<tr>\n<th>Author</th>\n<td>\n<a href=\"/ebooks/author/36308\" rel=\"marcrel:aut\" about=\"/authors/36308\" typeof=\"pgterms:agent\" itemprop=\"creator\">Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</a></td>\n</tr>\n<tr>\n<th>Title</th>\n<td itemprop=\"headline\">\nCalculus Made Easy<br>Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus\n</td>\n</tr>\n<tr property=\"dcterms:language\" datatype=\"dcterms:RFC4646\" itemprop=\"inLanguage\" content=\"en\">\n<th>Language</th>\n<td>English</td>\n</tr>\n<tr property=\"dcterms:subject\" datatype=\"dcterms:LCC\" content=\"QA\">\n<th>LoC Class</th>\n<td>\n<a href=\"/browse/loccs/qa\">QA: Science: Mathematics</a>\n</td>\n</tr>\n<tr>\n<th>Subject</th>\n<td property=\"dcterms:subject\" datatype=\"dcterms:LCSH\">\n<a class=\"block\" href=\"/ebooks/subject/10229\">\nCalculus\n</a>\n</td>\n</tr>\n<tr>\n<th>Category</th>\n<td property=\"dcterms:type\" datatype=\"dcterms:DCMIType\">Text</td>\n</tr>\n<tr>\n<th>EBook-No.</th>\n<td>33283</td>\n</tr>\n<tr property=\"dcterms:issued\" datatype=\"xsd:date\" content=\"2021-11-18\">\n<th>Release Date</th>\n<td itemprop=\"datePublished\">Jul 28, 2010</td>\n</tr>\n<tr property=\"dcterms:modified\" datatype=\"xsd:date\" content=\"2010-07-28T00:00:00+00:00\">\n<th>Most Recently Updated</th>\n<td itemprop=\"dateModified\">Nov 18, 2021</td>\n</tr>\n<tr>\n<th>Copyright Status</th>\n<td property=\"dcterms:rights\">Public domain in the USA.</td>\n</tr>\n<tr>\n<th>Downloads</th>\n<td itemprop=\"interactionCount\">12047 downloads in the last 30 days.</td>\n</tr>\n<tr itemprop=\"offers\" itemscope=\"itemscope\" itemtype=\"http://schema.org/Offer\">\n<td colspan=\"2\">\n<span itemprop=\"priceCurrency\" content=\"USD\"></span>\n<span itemprop=\"price\" content=\"$0.00\">\n<em>Project Gutenberg eBooks are always free!</em>\n</span>\n<span itemprop=\"availability\" content=\"In Stock\">\n<a href=\"http://schema.org/InStock\"></a>\n</span>\n</td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id=\"dialog\" class=\"hidden\">\n</div>\n</div>\n<div class=\"footer\">\n<div>\n<ul>\n<li>\n<a href=\"/policy/privacy_policy.html\" title=\"Privacy Policy\">Privacy policy</a>\n</li>\n<li>\n<a href=\"/about/\" title=\"About Project Gutenberg\">About Project Gutenberg</a>\n</li>\n<li>\n<a href=\"/policy/terms_of_use.html\" title=\"Terms of Use\">Terms of Use</a>\n</li>\n<li>\n<a href=\"/about/contact_information.html\" title=\"Contact Information\">Contact Information</a>\n</li>\n<li><a href=\"/help/\" title=\"Get Help\">Get Help</a></li>\n</ul>\n<a href=\"https://www.ibiblio.org/\" title=\"Project Gutenberg is hosted by ibiblio\">\n<img src=\"/gutenberg/ibiblio-logo.png\" alt=\"iBiblio\">\n</a>\n</div>\n</div>\n</body>\n</html>",
+  "html": "<!DOCTYPE html>\n<!--\nDON'T USE THIS PAGE FOR SCRAPING.\nSeriously. You'll only get your IP blocked.\nRead https://www.gutenberg.org/feeds/ to learn how to download Project\nGutenberg metadata much faster than by scraping.\n--><html lang=\"en\">\n\n\n\n\n<head>\n<style>\n.icon   { background: transparent url(/pics/sprite.png) 0 0 no-repeat; }\n.page_content a.subtle_link:link {color:currentColor; text-decoration: none;}\n.page_content a.subtle_link:hover {color:#003366}\n</style>\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/pg-desktop-one.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/new_nav.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/gutenberg/style.css\">\n<script>//\nvar canonical_url   = \"http://www.gutenberg.org/ebooks/33283\";\nvar lang            = \"en\";\nvar msg_load_more   = \"Load More Results…\";\nvar page_mode       = \"screen\";\nvar dialog_title    = \"\";\nvar dialog_message  = \"\";\n//</script>\n<script src=\"/js/pg-two.js\"></script>\n<link rel=\"shortcut icon\" href=\"/gutenberg/favicon.ico\">\n<link rel=\"canonical\" href=\"http://www.gutenberg.org/ebooks/33283\">\n<link rel=\"search\" type=\"application/opensearchdescription+xml\" title=\"Search Project Gutenberg\" href=\"https://www.gutenberg.org/catalog/osd-books.xml\">\n<link rel=\"alternate nofollow\" type=\"application/atom+xml;profile=opds-catalog\" title=\"OPDS feed\" href=\"/ebooks/33283.opds\">\n<link rel=\"apple-touch-icon\" href=\"/gutenberg/apple-icon.png\">\n<meta name=\"viewport\" content=\"width=device-width\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta http-equiv=\"default-style\" content=\"text/css\">\n<meta name=\"title\" content=\"Calculus Made Easy by Silvanus P. Thompson\">\n<meta name=\"description\" content=\"Free kindle book and epub digitized and proofread by volunteers.\">\n<meta name=\"keywords\" content=\"ebook, ebooks, free ebooks, free books, book, books, audio books\">\n<meta name=\"classification\" content=\"public\">\n<meta property=\"og:title\" content=\"Calculus Made Easy by Silvanus P. Thompson\">\n<meta property=\"og:description\" content=\"Free kindle book and epub digitized and proofread by volunteers.\">\n<meta property=\"og:type\" content=\"book\">\n<meta property=\"og:image\" content=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\">\n<meta property=\"og:url\" content=\"http://www.gutenberg.org/ebooks/33283\">\n<meta property=\"og:site_name\" content=\"Project Gutenberg\">\n<meta property=\"fb:app_id\" content=\"115319388529183\">\n<meta name=\"twitter:card\" content=\"summary\">\n<meta name=\"twitter:site\" content=\"@gutenberg_new\">\n<meta name=\"twitter:image\" content=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\">\n<meta name=\"twitter:image:alt\" content=\"book cover image\">\n<title>Calculus Made Easy by Silvanus P. Thompson | Project Gutenberg</title>\n<link rel=\"alternate nofollow\" type=\"application/rdf+xml\" href=\"/ebooks/33283.rdf\">\n<style>\n.qrcode { background: transparent url(/cache/epub/33283/pg33283.qrcode.png) 0 0 no-repeat; }\n</style>\n<meta name=\"google\" content=\"notranslate\">\n</head>\n<body>\n<div class=\"container\">\n<nav>\n<!--<div id=\"main_logo\"> -->\n<a id=\"main_logo\" href=\"/\" class=\"no-hover\">\n<img src=\"/gutenberg/pg-logo-129x80.png\" alt=\"Project Gutenberg\" draggable=\"false\">\n</a>\n<!--\t</div>-->\n<div id=\"menu\">\n<label for=\"tm\" id=\"toggle-menu\">Menu<span class=\"drop-icon\">▾</span></label>\n<input type=\"checkbox\" id=\"tm\">\n<ul class=\"main-menu cf\">\n<li>\n<a href=\"/about/\">About\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm0\">▾</label>\n<input type=\"checkbox\" id=\"sm0\">\n<ul class=\"sub-menu\">\n<li><a href=\"/about/\">About Project Gutenberg</a></li>\n<li><a href=\"/policy/collection_development.html\">Collection Development</a></li>\n<li><a href=\"/about/contact_information.html\">Contact Us</a></li>\n<li><a href=\"/about/background/\">History &amp; Philosophy</a></li>\n<li><a href=\"/policy/permission.html\">Permissions &amp; License</a></li>\n<li><a href=\"/policy/privacy_policy.html\">Privacy Policy</a></li>\n<li><a href=\"/policy/terms_of_use.html\">Terms of Use</a></li>\n</ul>\n</li>\n<li>\n<a href=\"/ebooks/\">Search and Browse\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm8\">▾</label>\n<input type=\"checkbox\" id=\"sm8\">\n<ul class=\"sub-menu\">\n<li><a href=\"/ebooks/\">Book Search</a></li>\n<li><a href=\"/ebooks/bookshelf/\">Bookshelves</a></li>\n<li><a href=\"/browse/scores/top\">Frequently Downloaded</a></li>\n<li><a href=\"/ebooks/offline_catalogs.html\">Offline Catalogs</a></li>\n</ul>\n</li>\n<li>\n<a href=\"/help/\">Help\n<span class=\"drop-icon\">▾</span>\n</a>\n<label title=\"Toggle Drop-down\" class=\"drop-icon\" for=\"sm3\">▾</label>\n<input type=\"checkbox\" id=\"sm3\">\n<ul class=\"sub-menu\">\n<li><a href=\"/help/\">All help topics →</a></li>\n<li><a href=\"/help/copyright.html\">Copyright Procedures</a></li>\n<li><a href=\"/help/errata.html\">Errata, Fixes and Bug Reports</a></li>\n<li><a href=\"/help/file_formats.html\">File Formats</a></li>\n<li><a href=\"/help/faq.html\">Frequently Asked Questions</a></li>\n<li><a href=\"/policy/\">Policies →</a></li>\n<li><a href=\"/help/public_domain_ebook_submission.html\">Public Domain eBook Submission</a></li>\n<li><a href=\"/help/submitting_your_own_work.html\">Submitting Your Own Work</a></li>\n<li><a href=\"/help/mobile.html\">Tablets, Phones and eReaders</a></li>\n<li><a href=\"/attic/\">The Attic →</a></li>\n</ul>\n</li>\n<li><a href=\"/donate/\">Donate</a></li>\n</ul>\n</div>\n<div class=\"donate\">\n<div class=\"searchbox\">\n<form method=\"get\" action=\"/ebooks/search/\" accept-charset=\"utf-8\" enctype=\"multipart/form-data\" class=\"searchbox\">\n<input type=\"text\" value=\"\" id=\"menu-book-search\" name=\"query\" class=\"searchInput\" title=\"Quick search\" tabindex=\"20\" size=\"20\" maxlength=\"80\" placeholder=\"Quick search\">\n<input type=\"submit\" name=\"submit_search\" value=\"Go!\" style=\"vertical-align:middle;\">\n</form>\n</div>\n<form class=\"donatelink\" action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"new\">\n<p><a href=\"/donate/\">Donation</a></p>\n<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">\n<input type=\"hidden\" name=\"hosted_button_id\" value=\"XKAL6BZL3YPSN\">\n<input class=\"donbtn\" type=\"image\" src=\"/pics/en_US.gif\" name=\"submit\" alt=\"Donate via PayPal\">\n</form>\n</div>\n</nav>\n<div class=\"page_content\" id=\"content\" itemscope=\"itemscope\" itemtype=\"http://schema.org/Book\">\n<div class=\"breadcrumbs noprint\">\n<ul itemscope=\"itemscope\" itemtype=\"https://schema.org/BreadcrumbList\">\n<li class=\"breadcrumb first\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/\" title=\"Go to the Main page.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">Project Gutenberg</span></a><meta itemprop=\"position\" content=\"0\">\n</li>\n<li class=\"breadcrumb next\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/ebooks/\" title=\"Start a new search.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">74,254 free eBooks</span></a><meta itemprop=\"position\" content=\"1\">\n</li>\n<li class=\"breadcrumb next\" itemprop=\"itemListElement\" itemscope=\"itemscope\" itemtype=\"https://schema.org/ListItem\">\n<span class=\"breadcrumb-separator\"></span>\n<a href=\"/ebooks/author/36308\" title=\"Find more eBooks by the same author.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">7 by Silvanus P. Thompson</span></a><meta itemprop=\"position\" content=\"2\">\n</li>\n</ul>\n</div>\n<h1 itemprop=\"name\">Calculus Made Easy by Silvanus P. Thompson</h1>\n<div class=\"page-body\">\n<div property=\"dcterms:publisher\" itemprop=\"publisher\" content=\"Project Gutenberg\"></div>\n<div itemprop=\"bookFormat\" content=\"EBook\"></div>\n<div id=\"cover-social-wrapper\">\n<div id=\"cover\">\n<img class=\"cover-art\" src=\"https://www.gutenberg.org/cache/epub/33283/pg33283.cover.medium.jpg\" title=\"Book Cover\" alt=\"Book Cover\" itemprop=\"image\">\n</div>\n<div id=\"social\" class=\"noprint\">\n<ul>\n<li>\n<!-- toot without javascript -->\n<div class=\"social-button masto-share-button\">\n<a href=\"https://toot.kytta.dev/?text=Free%20book%20at%20Project%20Gutenberg%3A%20Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson%20http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Mastodon\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_masto\"></span>\n</a>\n</div>\n</li>\n<li>\n<!-- tweet without javascript -->\n<div class=\"social-button twitter-share-button\">\n<a href=\"https://twitter.com/share?url=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283&amp;text=Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson&amp;count=none&amp;lang=en&amp;related=gutenberg_new%3AProject%20Gutenberg%20New%20Books\" title=\"Share on Twitter\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_twitter\"></span>\n</a>\n</div>\n</li>\n<li>\n<div class=\"social-button fb-share-button\">\n<a href=\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Facebook\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_facebook\"></span>\n</a>\n</div>\n</li>\n<li>\n<a onclick=\"printpage()\" title=\"Print this page\"><span class=\"icon icon_print\"></span></a>\n</li>\n</ul>\n</div>\n<div id=\"qr\">\n<span class=\"qrcode qrcode-desktop\" title=\"Scan QR Code for this page.\"></span>\n</div>\n</div>\n<div id=\"tabs-wrapper\">\n<div id=\"tabs\">\n<div id=\"download\">\n<div about=\"[ebook:33283]\" rel=\"dcterms:hasFormat\">\n<h2>Read now or download (free!)</h2>\n<table class=\"files\">\n<colgroup>\n<col class=\"narrow\">\n<col>\n<col>\n<col>\n<col class=\"narrow noprint\">\n<col class=\"narrow noprint\">\n<col class=\"narrow noprint\">\n</colgroup>\n<tr>\n<th></th>\n<th>Choose how to read this book <span>\n<a href=\"/help/bibliographic_record.html#format\" title=\"Information about format.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noscreen\">Url</th>\n<th class=\"right\">Size</th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#Dropbox\" title=\"Information about Dropbox.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#Google_Drive\" title=\"Information about Google Drive.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n<th class=\"noprint\"><span>\n<a href=\"/help/bibliographic_record.html#OneDrive\" title=\"Information about OneDrive.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></th>\n</tr>\n<tr class=\"even\" about=\"https://www.gutenberg.org/files/33283/33283-pdf.pdf\" typeof=\"pgterms:file\">\n<td><span class=\"icon icon_book\"></span></td>\n<td property=\"dcterms:format\" content=\"application/pdf\" datatype=\"dcterms:IMT\" class=\"unpadded icon_save\"><a href=\"/files/33283/33283-pdf.pdf\" type=\"application/pdf\" class=\"link\" title=\"Download\">PDF</a></td>\n<td class=\"noscreen\">https://www.gutenberg.org/files/33283/33283-pdf.pdf</td>\n<td class=\"right\" property=\"dcterms:extent\" content=\"1914481\">1.8 MB</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/dropbox/33283.pdf\" title=\"Send to Dropbox.\" rel=\"nofollow\"><span class=\"icon icon_dropbox\"></span></a>\n</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/gdrive/33283.pdf\" title=\"Send to Google Drive.\" rel=\"nofollow\"><span class=\"icon icon_gdrive\"></span></a>\n</td>\n<td class=\"noprint\">\n<a href=\"/ebooks/send/msdrive/33283.pdf\" title=\"Send to OneDrive.\" rel=\"nofollow\"><span class=\"icon icon_msdrive\"></span></a>\n</td>\n</tr><tr class=\"even\" about=\"https://www.gutenberg.org/files/33283/33283-t/33283-t.tex\" typeof=\"pgterms:file\">\n<td><span class=\"icon icon_book\"></span></td>\n<td property=\"dcterms:format\" content=\"application/prs.tex\" datatype=\"dcterms:IMT\" class=\"unpadded icon_save\"><a href=\"/files/33283/33283-t/33283-t.tex\" type=\"application/prs.tex\" class=\"link\" title=\"Download\">TeX</a></td>\n<td class=\"noscreen\">https://www.gutenberg.org/files/33283/33283-t/33283-t.tex</td>\n<td class=\"right\" property=\"dcterms:extent\" content=\"404533\">395 kB</td>\n<td class=\"noprint\">\n</td>\n<td class=\"noprint\">\n</td>\n<td class=\"noprint\">\n</td>\n</tr>\n<tr class=\"even\">\n<td><span class=\"icon icon_folder\"></span></td>\n<td colspan=\"6\"><span class=\"small\">\nThere may be <a class=\"subtle_link\" rel=\"nofollow\" href=\"/files/33283/\">more files</a> related to this item.</span></td>\n</tr>\n</table>\n</div>\n</div> <!-- download -->\n<div id=\"more_stuff\">\n<h2 class=\"header\">Similar Books</h2>\n<div class=\"grayed navlink noprint\">\n<a rel=\"nofollow\" href=\"/ebooks/33283/also/\" accesskey=\"1\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_suggestion\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">Readers also downloaded…</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/102\" accesskey=\"2\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/459\" accesskey=\"3\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n<div class=\"grayed navlink\">\n<a rel=\"nofollow\" href=\"/ebooks/bookshelf/478\" accesskey=\"4\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Science - General</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>\n</div>\n</div> <!-- more stuff -->\n<div id=\"bibrec\">\n<div typeof=\"pgterms:ebook\" about=\"[ebook:33283]\">\n<h2>About this eBook <span>\n<a href=\"/help/bibliographic_record.html#Table:_Bibliographic_Record\" title=\"Information about Table: Bibliographic Record.\"><span class=\"icon icon_help noprint\"></span></a>\n</span></h2>\n<table class=\"bibrec\">\n<colgroup>\n<col class=\"narrow\">\n<col>\n</colgroup>\n<tr>\n<th>Author</th>\n<td>\n<a href=\"/ebooks/author/36308\" rel=\"marcrel:aut\" about=\"/authors/36308\" typeof=\"pgterms:agent\" itemprop=\"creator\">Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</a></td>\n</tr>\n<tr>\n<th>Title</th>\n<td itemprop=\"headline\">\nCalculus Made Easy<br>Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus\n</td>\n</tr>\n<tr property=\"dcterms:language\" datatype=\"dcterms:RFC4646\" itemprop=\"inLanguage\" content=\"en\">\n<th>Language</th>\n<td>English</td>\n</tr>\n<tr property=\"dcterms:subject\" datatype=\"dcterms:LCC\" content=\"QA\">\n<th>LoC Class</th>\n<td>\n<a href=\"/browse/loccs/qa\">QA: Science: Mathematics</a>\n</td>\n</tr>\n<tr>\n<th>Subject</th>\n<td property=\"dcterms:subject\" datatype=\"dcterms:LCSH\">\n<a class=\"block\" href=\"/ebooks/subject/10229\">\nCalculus\n</a>\n</td>\n</tr>\n<tr>\n<th>Category</th>\n<td property=\"dcterms:type\" datatype=\"dcterms:DCMIType\">Text</td>\n</tr>\n<tr>\n<th>EBook-No.</th>\n<td>33283</td>\n</tr>\n<tr property=\"dcterms:issued\" datatype=\"xsd:date\" content=\"2021-11-18\">\n<th>Release Date</th>\n<td itemprop=\"datePublished\">Jul 28, 2010</td>\n</tr>\n<tr property=\"dcterms:modified\" datatype=\"xsd:date\" content=\"2010-07-28T00:00:00+00:00\">\n<th>Most Recently Updated</th>\n<td itemprop=\"dateModified\">Nov 18, 2021</td>\n</tr>\n<tr>\n<th>Copyright Status</th>\n<td property=\"dcterms:rights\">Public domain in the USA.</td>\n</tr>\n<tr>\n<th>Downloads</th>\n<td itemprop=\"interactionCount\">12047 downloads in the last 30 days.</td>\n</tr>\n<tr itemprop=\"offers\" itemscope=\"itemscope\" itemtype=\"http://schema.org/Offer\">\n<td colspan=\"2\">\n<span itemprop=\"priceCurrency\" content=\"USD\"></span>\n<span itemprop=\"price\" content=\"$0.00\">\n<em>Project Gutenberg eBooks are always free!</em>\n</span>\n<span itemprop=\"availability\" content=\"In Stock\">\n<a href=\"http://schema.org/InStock\"></a>\n</span>\n</td>\n</tr>\n</table>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id=\"dialog\" class=\"hidden\">\n</div>\n</div>\n<div class=\"footer\">\n<div>\n<ul>\n<li>\n<a href=\"/policy/privacy_policy.html\" title=\"Privacy Policy\">Privacy policy</a>\n</li>\n<li>\n<a href=\"/about/\" title=\"About Project Gutenberg\">About Project Gutenberg</a>\n</li>\n<li>\n<a href=\"/policy/terms_of_use.html\" title=\"Terms of Use\">Terms of Use</a>\n</li>\n<li>\n<a href=\"/about/contact_information.html\" title=\"Contact Information\">Contact Information</a>\n</li>\n<li><a href=\"/help/\" title=\"Get Help\">Get Help</a></li>\n</ul>\n<a href=\"https://www.ibiblio.org/\" title=\"Project Gutenberg is hosted by ibiblio\">\n<img src=\"/gutenberg/ibiblio-logo.png\" alt=\"iBiblio\">\n</a>\n</div>\n</div>\n</body>\n</html>",
+  "text": "                                                        Calculus Made Easy by Silvanus P. Thompson | Project Gutenberg                    Menu ▾      About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate              Donation                 Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson      Calculus Made Easy by Silvanus P. Thompson                                                         Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                       Privacy policy    About Project Gutenberg    Terms of Use    Contact Information   Get Help                                                                 Calculus Made Easy by Silvanus P. Thompson | Project Gutenberg       Calculus Made Easy by Silvanus P. Thompson | Project Gutenberg             Menu ▾      About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate              Donation                 Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson      Calculus Made Easy by Silvanus P. Thompson                                                         Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                       Privacy policy    About Project Gutenberg    Terms of Use    Contact Information   Get Help                    Menu ▾      About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate              Donation                 Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson      Calculus Made Easy by Silvanus P. Thompson                                                         Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                            Menu ▾      About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate              Donation              Menu ▾      About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate   Menu ▾ ▾   About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use     Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs     Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →    Donate   About ▾   ▾     About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use   About ▾  ▾ ▾  About Project Gutenberg  Collection Development  Contact Us  History & Philosophy  Permissions & License  Privacy Policy  Terms of Use  About Project Gutenberg About Project Gutenberg Collection Development Collection Development Contact Us Contact Us History & Philosophy History & Philosophy Permissions & License Permissions & License Privacy Policy Privacy Policy Terms of Use Terms of Use  Search and Browse ▾   ▾     Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs   Search and Browse ▾  ▾ ▾  Book Search  Bookshelves  Frequently Downloaded  Offline Catalogs  Book Search Book Search Bookshelves Bookshelves Frequently Downloaded Frequently Downloaded Offline Catalogs Offline Catalogs  Help ▾   ▾     All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →   Help ▾  ▾ ▾  All help topics →  Copyright Procedures  Errata, Fixes and Bug Reports  File Formats  Frequently Asked Questions  Policies →  Public Domain eBook Submission  Submitting Your Own Work  Tablets, Phones and eReaders  The Attic →  All help topics → All help topics → Copyright Procedures Copyright Procedures Errata, Fixes and Bug Reports Errata, Fixes and Bug Reports File Formats File Formats Frequently Asked Questions Frequently Asked Questions Policies → Policies → Public Domain eBook Submission Public Domain eBook Submission Submitting Your Own Work Submitting Your Own Work Tablets, Phones and eReaders Tablets, Phones and eReaders The Attic → The Attic → Donate Donate           Donation                      Donation        Donation Donation       Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson      Calculus Made Easy by Silvanus P. Thompson                                                         Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                    Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson         Project Gutenberg       74,254 free eBooks       7 by Silvanus P. Thompson       Project Gutenberg   Project Gutenberg Project Gutenberg    74,254 free eBooks   74,254 free eBooks 74,254 free eBooks    7 by Silvanus P. Thompson   7 by Silvanus P. Thompson 7 by Silvanus P. Thompson Calculus Made Easy by Silvanus P. Thompson                                                        Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                                                                                                                                                                                              Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!                Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.         Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!              Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.      Read now or download (free!)                      Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.    Read now or download (free!)                     Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.                     Choose how to read this book     Url  Size                  PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB                 TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB            There may be more files related to this item.      Choose how to read this book     Url  Size              Choose how to read this book        Url Size                         PDF  https://www.gutenberg.org/files/33283/33283-pdf.pdf  1.8 MB               PDF PDF https://www.gutenberg.org/files/33283/33283-pdf.pdf 1.8 MB                TeX  https://www.gutenberg.org/files/33283/33283-t/33283-t.tex  395 kB         TeX TeX https://www.gutenberg.org/files/33283/33283-t/33283-t.tex 395 kB       There may be more files related to this item.   There may be more files related to this item. There may be more files related to this item. more files  Similar Books         Readers also downloaded…              In Mathematics              In Browsing: Mathematics              In Browsing: Science - General       Similar Books        Readers also downloaded…            Readers also downloaded…         Readers also downloaded…  Readers also downloaded…        In Mathematics            In Mathematics         In Mathematics  In Mathematics        In Browsing: Mathematics            In Browsing: Mathematics         In Browsing: Mathematics  In Browsing: Mathematics        In Browsing: Science - General            In Browsing: Science - General         In Browsing: Science - General  In Browsing: Science - General   About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!            About this eBook             Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!          About this eBook                Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!               Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916    Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus    Language  English    LoC Class   QA: Science: Mathematics     Subject   Calculus     Category  Text    EBook-No.  33283    Release Date  Jul 28, 2010    Most Recently Updated  Nov 18, 2021    Copyright Status  Public domain in the USA.    Downloads  12047 downloads in the last 30 days.        Project Gutenberg eBooks are always free!          Author   Thompson, Silvanus P. (Silvanus Phillips), 1851-1916  Author  Thompson, Silvanus P. (Silvanus Phillips), 1851-1916 Thompson, Silvanus P. (Silvanus Phillips), 1851-1916  Title  Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus  Title Calculus Made Easy  Being a very-simplest introduction to those beautiful methods which are generally called by the terrifying names of the Differential Calculus and the Integral Calculus  Language  English  Language English  LoC Class   QA: Science: Mathematics   LoC Class  QA: Science: Mathematics  QA: Science: Mathematics  Subject   Calculus   Subject  Calculus  Calculus  Category  Text  Category Text  EBook-No.  33283  EBook-No. 33283  Release Date  Jul 28, 2010  Release Date Jul 28, 2010  Most Recently Updated  Nov 18, 2021  Most Recently Updated Nov 18, 2021  Copyright Status  Public domain in the USA.  Copyright Status Public domain in the USA.  Downloads  12047 downloads in the last 30 days.  Downloads 12047 downloads in the last 30 days.      Project Gutenberg eBooks are always free!            Project Gutenberg eBooks are always free!        Project Gutenberg eBooks are always free!  Project Gutenberg eBooks are always free!         Privacy policy    About Project Gutenberg    Terms of Use    Contact Information   Get Help           Privacy policy    About Project Gutenberg    Terms of Use    Contact Information   Get Help         Privacy policy    About Project Gutenberg    Terms of Use    Contact Information   Get Help   Privacy policy  Privacy policy  About Project Gutenberg  About Project Gutenberg  Terms of Use  Terms of Use  Contact Information  Contact Information Get Help Get Help   ",
+  "links": [
+    {
+      "id": 1,
+      "url": "https://www.gutenberg.org/",
+      "html": "<a id=\"main_logo\" href=\"/\" class=\"no-hover\">\n<img src=\"/gutenberg/pg-logo-129x80.png\" alt=\"Project Gutenberg\" draggable=\"false\">\n</a>",
+      "text": "\n\n"
+    },
+    {
+      "id": 2,
+      "url": "https://www.gutenberg.org/about/",
+      "html": "<a href=\"/about/\">About\n<span class=\"drop-icon\">▾</span>\n</a>",
+      "text": "About\n▾\n"
+    },
+    {
+      "id": 3,
+      "url": "https://www.gutenberg.org/about/",
+      "html": "<a href=\"/about/\">About Project Gutenberg</a>",
+      "text": "About Project Gutenberg"
+    },
+    {
+      "id": 4,
+      "url": "https://www.gutenberg.org/policy/collection_development.html",
+      "html": "<a href=\"/policy/collection_development.html\">Collection Development</a>",
+      "text": "Collection Development"
+    },
+    {
+      "id": 5,
+      "url": "https://www.gutenberg.org/about/contact_information.html",
+      "html": "<a href=\"/about/contact_information.html\">Contact Us</a>",
+      "text": "Contact Us"
+    },
+    {
+      "id": 6,
+      "url": "https://www.gutenberg.org/about/background/",
+      "html": "<a href=\"/about/background/\">History &amp; Philosophy</a>",
+      "text": "History & Philosophy"
+    },
+    {
+      "id": 7,
+      "url": "https://www.gutenberg.org/policy/permission.html",
+      "html": "<a href=\"/policy/permission.html\">Permissions &amp; License</a>",
+      "text": "Permissions & License"
+    },
+    {
+      "id": 8,
+      "url": "https://www.gutenberg.org/policy/privacy_policy.html",
+      "html": "<a href=\"/policy/privacy_policy.html\">Privacy Policy</a>",
+      "text": "Privacy Policy"
+    },
+    {
+      "id": 9,
+      "url": "https://www.gutenberg.org/policy/terms_of_use.html",
+      "html": "<a href=\"/policy/terms_of_use.html\">Terms of Use</a>",
+      "text": "Terms of Use"
+    },
+    {
+      "id": 10,
+      "url": "https://www.gutenberg.org/ebooks/",
+      "html": "<a href=\"/ebooks/\">Search and Browse\n<span class=\"drop-icon\">▾</span>\n</a>",
+      "text": "Search and Browse\n▾\n"
+    },
+    {
+      "id": 11,
+      "url": "https://www.gutenberg.org/ebooks/",
+      "html": "<a href=\"/ebooks/\">Book Search</a>",
+      "text": "Book Search"
+    },
+    {
+      "id": 12,
+      "url": "https://www.gutenberg.org/ebooks/bookshelf/",
+      "html": "<a href=\"/ebooks/bookshelf/\">Bookshelves</a>",
+      "text": "Bookshelves"
+    },
+    {
+      "id": 13,
+      "url": "https://www.gutenberg.org/browse/scores/top",
+      "html": "<a href=\"/browse/scores/top\">Frequently Downloaded</a>",
+      "text": "Frequently Downloaded"
+    },
+    {
+      "id": 14,
+      "url": "https://www.gutenberg.org/ebooks/offline_catalogs.html",
+      "html": "<a href=\"/ebooks/offline_catalogs.html\">Offline Catalogs</a>",
+      "text": "Offline Catalogs"
+    },
+    {
+      "id": 15,
+      "url": "https://www.gutenberg.org/help/",
+      "html": "<a href=\"/help/\">Help\n<span class=\"drop-icon\">▾</span>\n</a>",
+      "text": "Help\n▾\n"
+    },
+    {
+      "id": 16,
+      "url": "https://www.gutenberg.org/help/",
+      "html": "<a href=\"/help/\">All help topics →</a>",
+      "text": "All help topics →"
+    },
+    {
+      "id": 17,
+      "url": "https://www.gutenberg.org/help/copyright.html",
+      "html": "<a href=\"/help/copyright.html\">Copyright Procedures</a>",
+      "text": "Copyright Procedures"
+    },
+    {
+      "id": 18,
+      "url": "https://www.gutenberg.org/help/errata.html",
+      "html": "<a href=\"/help/errata.html\">Errata, Fixes and Bug Reports</a>",
+      "text": "Errata, Fixes and Bug Reports"
+    },
+    {
+      "id": 19,
+      "url": "https://www.gutenberg.org/help/file_formats.html",
+      "html": "<a href=\"/help/file_formats.html\">File Formats</a>",
+      "text": "File Formats"
+    },
+    {
+      "id": 20,
+      "url": "https://www.gutenberg.org/help/faq.html",
+      "html": "<a href=\"/help/faq.html\">Frequently Asked Questions</a>",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "id": 21,
+      "url": "https://www.gutenberg.org/policy/",
+      "html": "<a href=\"/policy/\">Policies →</a>",
+      "text": "Policies →"
+    },
+    {
+      "id": 22,
+      "url": "https://www.gutenberg.org/help/public_domain_ebook_submission.html",
+      "html": "<a href=\"/help/public_domain_ebook_submission.html\">Public Domain eBook Submission</a>",
+      "text": "Public Domain eBook Submission"
+    },
+    {
+      "id": 23,
+      "url": "https://www.gutenberg.org/help/submitting_your_own_work.html",
+      "html": "<a href=\"/help/submitting_your_own_work.html\">Submitting Your Own Work</a>",
+      "text": "Submitting Your Own Work"
+    },
+    {
+      "id": 24,
+      "url": "https://www.gutenberg.org/help/mobile.html",
+      "html": "<a href=\"/help/mobile.html\">Tablets, Phones and eReaders</a>",
+      "text": "Tablets, Phones and eReaders"
+    },
+    {
+      "id": 25,
+      "url": "https://www.gutenberg.org/attic/",
+      "html": "<a href=\"/attic/\">The Attic →</a>",
+      "text": "The Attic →"
+    },
+    {
+      "id": 26,
+      "url": "https://www.gutenberg.org/donate/",
+      "html": "<a href=\"/donate/\">Donate</a>",
+      "text": "Donate"
+    },
+    {
+      "id": 27,
+      "url": "https://www.gutenberg.org/donate/",
+      "html": "<a href=\"/donate/\">Donation</a>",
+      "text": "Donation"
+    },
+    {
+      "id": 28,
+      "url": "https://www.gutenberg.org/",
+      "html": "<a href=\"/\" title=\"Go to the Main page.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">Project Gutenberg</span></a>",
+      "text": "Project Gutenberg"
+    },
+    {
+      "id": 29,
+      "url": "https://www.gutenberg.org/ebooks/",
+      "html": "<a href=\"/ebooks/\" title=\"Start a new search.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">74,254 free eBooks</span></a>",
+      "text": "74,254 free eBooks"
+    },
+    {
+      "id": 30,
+      "url": "https://www.gutenberg.org/ebooks/author/36308",
+      "html": "<a href=\"/ebooks/author/36308\" title=\"Find more eBooks by the same author.\" itemprop=\"item\" typeof=\"WebPage\"><span itemprop=\"name\">7 by Silvanus P. Thompson</span></a>",
+      "text": "7 by Silvanus P. Thompson"
+    },
+    {
+      "id": 31,
+      "url": "https://toot.kytta.dev/?text=Free%20book%20at%20Project%20Gutenberg%3A%20Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson%20http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283",
+      "html": "<a href=\"https://toot.kytta.dev/?text=Free%20book%20at%20Project%20Gutenberg%3A%20Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson%20http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Mastodon\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_masto\"></span>\n</a>",
+      "text": "\n\n"
+    },
+    {
+      "id": 32,
+      "url": "https://twitter.com/share?url=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283&text=Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson&count=none&lang=en&related=gutenberg_new%3AProject%20Gutenberg%20New%20Books",
+      "html": "<a href=\"https://twitter.com/share?url=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283&amp;text=Calculus%20Made%20Easy%20by%20Silvanus%20P.%20Thompson&amp;count=none&amp;lang=en&amp;related=gutenberg_new%3AProject%20Gutenberg%20New%20Books\" title=\"Share on Twitter\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_twitter\"></span>\n</a>",
+      "text": "\n\n"
+    },
+    {
+      "id": 33,
+      "url": "https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283",
+      "html": "<a href=\"https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.gutenberg.org%2Febooks%2F33283\" title=\"Share on Facebook\" onclick=\"open_share_popup(this.href, this.target, 640, 320)\" target=\"_top\">\n<span class=\"icon icon_facebook\"></span>\n</a>",
+      "text": "\n\n"
+    },
+    {
+      "id": 34,
+      "url": "https://www.gutenberg.org/ebooks/undefined",
+      "html": "<a onclick=\"printpage()\" title=\"Print this page\"><span class=\"icon icon_print\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 35,
+      "url": "https://www.gutenberg.org/help/bibliographic_record.html#format",
+      "html": "<a href=\"/help/bibliographic_record.html#format\" title=\"Information about format.\"><span class=\"icon icon_help noprint\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 36,
+      "url": "https://www.gutenberg.org/help/bibliographic_record.html#Dropbox",
+      "html": "<a href=\"/help/bibliographic_record.html#Dropbox\" title=\"Information about Dropbox.\"><span class=\"icon icon_help noprint\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 37,
+      "url": "https://www.gutenberg.org/help/bibliographic_record.html#Google_Drive",
+      "html": "<a href=\"/help/bibliographic_record.html#Google_Drive\" title=\"Information about Google Drive.\"><span class=\"icon icon_help noprint\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 38,
+      "url": "https://www.gutenberg.org/help/bibliographic_record.html#OneDrive",
+      "html": "<a href=\"/help/bibliographic_record.html#OneDrive\" title=\"Information about OneDrive.\"><span class=\"icon icon_help noprint\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 39,
+      "url": "https://www.gutenberg.org/files/33283/33283-pdf.pdf",
+      "html": "<a href=\"/files/33283/33283-pdf.pdf\" type=\"application/pdf\" class=\"link\" title=\"Download\">PDF</a>",
+      "text": "PDF"
+    },
+    {
+      "id": 40,
+      "url": "https://www.gutenberg.org/ebooks/send/dropbox/33283.pdf",
+      "html": "<a href=\"/ebooks/send/dropbox/33283.pdf\" title=\"Send to Dropbox.\" rel=\"nofollow\"><span class=\"icon icon_dropbox\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 41,
+      "url": "https://www.gutenberg.org/ebooks/send/gdrive/33283.pdf",
+      "html": "<a href=\"/ebooks/send/gdrive/33283.pdf\" title=\"Send to Google Drive.\" rel=\"nofollow\"><span class=\"icon icon_gdrive\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 42,
+      "url": "https://www.gutenberg.org/ebooks/send/msdrive/33283.pdf",
+      "html": "<a href=\"/ebooks/send/msdrive/33283.pdf\" title=\"Send to OneDrive.\" rel=\"nofollow\"><span class=\"icon icon_msdrive\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 43,
+      "url": "https://www.gutenberg.org/files/33283/33283-t/33283-t.tex",
+      "html": "<a href=\"/files/33283/33283-t/33283-t.tex\" type=\"application/prs.tex\" class=\"link\" title=\"Download\">TeX</a>",
+      "text": "TeX"
+    },
+    {
+      "id": 44,
+      "url": "https://www.gutenberg.org/files/33283/",
+      "html": "<a class=\"subtle_link\" rel=\"nofollow\" href=\"/files/33283/\">more files</a>",
+      "text": "more files"
+    },
+    {
+      "id": 45,
+      "url": "https://www.gutenberg.org/ebooks/33283/also/",
+      "html": "<a rel=\"nofollow\" href=\"/ebooks/33283/also/\" accesskey=\"1\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_suggestion\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">Readers also downloaded…</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+      "text": "\n\n\n\n\nReaders also downloaded…\n\n\n"
+    },
+    {
+      "id": 46,
+      "url": "https://www.gutenberg.org/ebooks/bookshelf/102",
+      "html": "<a rel=\"nofollow\" href=\"/ebooks/bookshelf/102\" accesskey=\"2\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+      "text": "\n\n\n\n\nIn Mathematics\n\n\n"
+    },
+    {
+      "id": 47,
+      "url": "https://www.gutenberg.org/ebooks/bookshelf/459",
+      "html": "<a rel=\"nofollow\" href=\"/ebooks/bookshelf/459\" accesskey=\"3\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Mathematics</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+      "text": "\n\n\n\n\nIn Browsing: Mathematics\n\n\n"
+    },
+    {
+      "id": 48,
+      "url": "https://www.gutenberg.org/ebooks/bookshelf/478",
+      "html": "<a rel=\"nofollow\" href=\"/ebooks/bookshelf/478\" accesskey=\"4\">\n<span class=\"cell leftcell\">\n<span class=\"icon icon_bookshelf\"></span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">In Browsing: Science - General</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+      "text": "\n\n\n\n\nIn Browsing: Science - General\n\n\n"
+    },
+    {
+      "id": 49,
+      "url": "https://www.gutenberg.org/help/bibliographic_record.html#Table:_Bibliographic_Record",
+      "html": "<a href=\"/help/bibliographic_record.html#Table:_Bibliographic_Record\" title=\"Information about Table: Bibliographic Record.\"><span class=\"icon icon_help noprint\"></span></a>",
+      "text": ""
+    },
+    {
+      "id": 50,
+      "url": "https://www.gutenberg.org/ebooks/author/36308",
+      "html": "<a href=\"/ebooks/author/36308\" rel=\"marcrel:aut\" about=\"/authors/36308\" typeof=\"pgterms:agent\" itemprop=\"creator\">Thompson, Silvanus P. (Silvanus Phillips), 1851-1916</a>",
+      "text": "Thompson, Silvanus P. (Silvanus Phillips), 1851-1916"
+    },
+    {
+      "id": 51,
+      "url": "https://www.gutenberg.org/browse/loccs/qa",
+      "html": "<a href=\"/browse/loccs/qa\">QA: Science: Mathematics</a>",
+      "text": "QA: Science: Mathematics"
+    },
+    {
+      "id": 52,
+      "url": "https://www.gutenberg.org/ebooks/subject/10229",
+      "html": "<a class=\"block\" href=\"/ebooks/subject/10229\">\nCalculus\n</a>",
+      "text": "\nCalculus\n"
+    },
+    {
+      "id": 53,
+      "url": "http://schema.org/InStock",
+      "html": "<a href=\"http://schema.org/InStock\"></a>",
+      "text": ""
+    },
+    {
+      "id": 54,
+      "url": "https://www.gutenberg.org/policy/privacy_policy.html",
+      "html": "<a href=\"/policy/privacy_policy.html\" title=\"Privacy Policy\">Privacy policy</a>",
+      "text": "Privacy policy"
+    },
+    {
+      "id": 55,
+      "url": "https://www.gutenberg.org/about/",
+      "html": "<a href=\"/about/\" title=\"About Project Gutenberg\">About Project Gutenberg</a>",
+      "text": "About Project Gutenberg"
+    },
+    {
+      "id": 56,
+      "url": "https://www.gutenberg.org/policy/terms_of_use.html",
+      "html": "<a href=\"/policy/terms_of_use.html\" title=\"Terms of Use\">Terms of Use</a>",
+      "text": "Terms of Use"
+    },
+    {
+      "id": 57,
+      "url": "https://www.gutenberg.org/about/contact_information.html",
+      "html": "<a href=\"/about/contact_information.html\" title=\"Contact Information\">Contact Information</a>",
+      "text": "Contact Information"
+    },
+    {
+      "id": 58,
+      "url": "https://www.gutenberg.org/help/",
+      "html": "<a href=\"/help/\" title=\"Get Help\">Get Help</a>",
+      "text": "Get Help"
+    },
+    {
+      "id": 59,
+      "url": "https://www.ibiblio.org/",
+      "html": "<a href=\"https://www.ibiblio.org/\" title=\"Project Gutenberg is hosted by ibiblio\">\n<img src=\"/gutenberg/ibiblio-logo.png\" alt=\"iBiblio\">\n</a>",
+      "text": "\n\n"
+    }
+  ],
+  "resp": {
+    "url": "https://www.gutenberg.org/ebooks/33283",
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "cache-control": "no-cache, must-revalidate",
+      "content-encoding": "gzip",
+      "content-language": "en",
+      "content-length": "4660",
+      "content-type": "text/html;charset=utf-8",
+      "date": "Sun, 15 Sep 2024 01:18:58 GMT",
+      "expires": "Sun, 28 Jan 2007 00:00:00 GMT",
+      "pragma": "no-cache",
+      "server": "CherryPy/18.9.0",
+      "set-cookie": "session_id=374a61861a802349de74392028558c6fa249653d; Domain=.gutenberg.org; expires=Sun, 15 Sep 2024 01:48:58 GMT; Max-Age=1800; Path=/",
+      "vary": "Accept-Encoding",
+      "x-backend": "gutenweb7"
+    }
+  },
+  "contentType": "text/html",
+  "req": {
+    "url": "https://www.gutenberg.org/ebooks/33283"
+  }
+}
