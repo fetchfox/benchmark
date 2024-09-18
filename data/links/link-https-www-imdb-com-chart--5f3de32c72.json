@@ -1,0 +1,62 @@
+[
+  {
+    "id": 80,
+    "url": "https://www.imdb.com/title/tt0816692/?ref_=chttp_i_19",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0816692/?ref_=chttp_i_19\" aria-label=\"View title page for Interstellar\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 89,
+    "url": "https://www.imdb.com/title/tt0102926/?ref_=chttp_t_23",
+    "html": "<a href=\"/title/tt0102926/?ref_=chttp_t_23\" class=\"ipc-title-link-wrapper\" tabindex=\"0\"><h3 class=\"ipc-title__text\">23. The Silence of the Lambs</h3></a>",
+    "text": "23. The Silence of the Lambs"
+  },
+  {
+    "id": 74,
+    "url": "https://www.imdb.com/title/tt0133093/?ref_=chttp_i_16",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0133093/?ref_=chttp_i_16\" aria-label=\"View title page for The Matrix\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 48,
+    "url": "https://www.imdb.com/title/tt0468569/?ref_=chttp_i_3",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0468569/?ref_=chttp_i_3\" aria-label=\"View title page for The Dark Knight\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 92,
+    "url": "https://www.imdb.com/title/tt0317248/?ref_=chttp_i_25",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0317248/?ref_=chttp_i_25\" aria-label=\"View title page for City of God\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 82,
+    "url": "https://www.imdb.com/title/tt0114369/?ref_=chttp_i_20",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0114369/?ref_=chttp_i_20\" aria-label=\"View title page for Se7en\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 55,
+    "url": "https://www.imdb.com/title/tt0108052/?ref_=chttp_t_6",
+    "html": "<a href=\"/title/tt0108052/?ref_=chttp_t_6\" class=\"ipc-title-link-wrapper\" tabindex=\"0\"><h3 class=\"ipc-title__text\">6. Schindler's List</h3></a>",
+    "text": "6. Schindler's List"
+  },
+  {
+    "id": 75,
+    "url": "https://www.imdb.com/title/tt0133093/?ref_=chttp_t_16",
+    "html": "<a href=\"/title/tt0133093/?ref_=chttp_t_16\" class=\"ipc-title-link-wrapper\" tabindex=\"0\"><h3 class=\"ipc-title__text\">16. The Matrix</h3></a>",
+    "text": "16. The Matrix"
+  },
+  {
+    "id": 52,
+    "url": "https://www.imdb.com/title/tt0050083/?ref_=chttp_i_5",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0050083/?ref_=chttp_i_5\" aria-label=\"View title page for 12 Angry Men\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  },
+  {
+    "id": 50,
+    "url": "https://www.imdb.com/title/tt0071562/?ref_=chttp_i_4",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0071562/?ref_=chttp_i_4\" aria-label=\"View title page for The Godfather Part II\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": ""
+  }
+]

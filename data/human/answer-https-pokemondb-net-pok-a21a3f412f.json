@@ -1,0 +1,16 @@
+{
+  "url": "https://pokemondb.net/pokedex/thievul",
+  "data": {
+    "Name": "Thievul",
+    "Number (include leading zeros)": "0828",
+    "Type": "Dark",
+    "Species": "Fox Pokémon",
+    "Height (m)": "1.2",
+    "Weight (kg)": "19.9",
+    "Base HP": "70",
+    "Base Attack": "58",
+    "Base Defense": "58",
+    "% Male, Format: XX.X": "50.0",
+    "% Female, Format: XX.X": "50.0"
+  }
+}

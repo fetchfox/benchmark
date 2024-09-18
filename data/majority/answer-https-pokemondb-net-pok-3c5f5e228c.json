@@ -1,0 +1,16 @@
+{
+  "url": "https://pokemondb.net/pokedex/vivillon",
+  "data": {
+    "Name": "Vivillon",
+    "Number (include leading zeros)": "0666",
+    "Type": "Bug Flying",
+    "Species": "Scale Pokémon",
+    "Height (m)": "1.2",
+    "Weight (kg)": "17.0",
+    "Base HP": "80",
+    "Base Attack": "52",
+    "Base Defense": "50",
+    "% Male, Format: XX.X": "50.0",
+    "% Female, Format: XX.X": "50.0"
+  }
+}

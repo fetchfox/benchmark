@@ -1,0 +1,16 @@
+{
+  "url": "https://pokemondb.net/pokedex/bronzor",
+  "data": {
+    "Name": "Bronzor",
+    "Number (include leading zeros)": "0436",
+    "Type": "Steel / Psychic",
+    "Species": "Bronze Pokémon",
+    "Height (m)": "0.5",
+    "Weight (kg)": "60.5",
+    "Base HP": "57",
+    "Base Attack": "24",
+    "Base Defense": "86",
+    "% Male, Format: XX.X": "(not found)",
+    "% Female, Format: XX.X": "(not found)"
+  }
+}

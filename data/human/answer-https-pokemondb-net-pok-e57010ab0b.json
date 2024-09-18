@@ -1,0 +1,16 @@
+{
+  "url": "https://pokemondb.net/pokedex/tirtouga",
+  "data": {
+    "Name": "Tirtouga",
+    "Number (include leading zeros)": "0564",
+    "Type": "Water, Rock",
+    "Species": "Prototurtle Pokémon",
+    "Height (m)": "0.7",
+    "Weight (kg)": "16.5",
+    "Base HP": "54",
+    "Base Attack": "78",
+    "Base Defense": "103",
+    "% Male, Format: XX.X": "87.5",
+    "% Female, Format: XX.X": "12.5"
+  }
+}

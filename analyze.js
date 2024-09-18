@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import { URL } from 'url';
 
 import {
   Crawler,
@@ -183,16 +184,16 @@ const oldRedditCase = {
 };
 
 const cases = [
-  // npmCase,
+  npmCase,
   wikipediaCase,
-  // pokedexCase,
-  // stackOverflowCase,
-  // imdbCase,
+  pokedexCase,
+  stackOverflowCase,
+  imdbCase,
   // mediumCase,
-  // hackerNewsCase,
-  // gutenbergCase,
-  // geniusCase,
-  // oldRedditCase,
+  hackerNewsCase,
+  gutenbergCase,
+  geniusCase,
+  oldRedditCase,
 
   // These don't work well with fetch()
   // xCase,
@@ -202,7 +203,7 @@ const cases = [
 const crawlerAi = 'openai:gpt-4o';
 
 const ais = [
-  // ['human'],
+  ['human'],
 
   ['openai:gpt-4o-mini'],
   ['openai:gpt-4o'],
@@ -256,6 +257,9 @@ const voteWeights = {
   'openai:gpt-4o-mini/basic': 2,
   'openai:gpt-4-turbo/basic': 1,
 
+  'openai:gpt-4o/min-simple+basic': 1,
+  'openai:gpt-4o-mini/min-simple+basic': 1,
+
   'openai:gpt-4o/iterative-prompt': 2,
   'openai:gpt-4o-mini/iterative-prompt': 2,
   'openai:gpt-4-turbo/iterative-prompt': 1,
@@ -277,7 +281,6 @@ const main = async () => {
     }
   }
 
-  const results = {};
   const usage = {};
   const cost = {};
   const elapsed = {};
@@ -286,6 +289,8 @@ const main = async () => {
   let count = 0;
 
   for (const cs of cases) {
+    const results = {};
+
     for (const [ai, aiOptions] of ais) {
       for (const [ex, exOptions, exLabel] of extractors) {
         console.log('');
@@ -386,6 +391,8 @@ const main = async () => {
         }
       }
     }
+
+    saveOutput(cs, results);
   }
 
   console.log('\nusage:');
@@ -491,7 +498,6 @@ const saveData = (subdir, keyArr, data) => {
   if (!fs.existsSync(path.dirname(filepath))) {
     fs.mkdirSync(path.dirname(filepath), { recursive: true });
   }
-
   fs.writeFileSync(filepath, JSON.stringify(data, null, 2), 'utf8');
 }
 
@@ -505,6 +511,57 @@ const loadData = (subdir, keyArr, data) => {
   } else {
     return null;
   }
+}
+
+const saveOutput = async (cs, answers, paths) => {
+  const filename = (new URL(cs.url)).hostname.replace(/\./g, '-') + '.json';
+  const filepath = path.join('./out/cases/', filename);
+
+  const ps = [
+    './out/cases',
+    './out/docs',
+  ];
+  for (const p of ps) {
+    if (!fs.existsSync(p)) {
+      fs.mkdirSync(p, { recursive: true });
+    }
+  }
+
+  console.log('save to', filepath);
+
+  const links = await getLinks(cs.url, cs.crawl, numLinks);
+  const docs = [];
+  const urls = [];
+
+  for (const link of links) {
+    const doc = new Document();
+    doc.loadData(loadData('docs', ['doc', link.url]));
+    const docFilename = generateKey(['doc', link.url]);
+    const docFilepath = path.join('docs/', docFilename); // relative
+    fs.writeFileSync(
+      path.join('./out', docFilepath),
+      JSON.stringify(doc.dump(), null, 2), 'utf8');
+
+    docs.push(docFilepath);
+    urls.push(link.url);
+  }
+
+  const csOut = Object.assign(
+    {},
+    cs,
+    { docs, answers, urls });
+
+  const outPath = JSON.stringify(csOut, null, 2);
+  fs.writeFileSync(filepath, outPath, 'utf8');
+
+  const casesDir = './out/cases';
+  const caseFiles = fs.readdirSync(casesDir)
+    .filter(file => file.endsWith('.json'))
+    .filter(file => file != 'list.json');
+  const listFilepath = path.join(casesDir, 'list.json');
+  fs.writeFileSync(listFilepath, JSON.stringify(caseFiles, null, 2), 'utf8');
+
+  console.log(`File list saved to ${listFilepath}`);
 }
 
 main();
