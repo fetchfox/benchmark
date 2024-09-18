@@ -183,7 +183,7 @@ const oldRedditCase = {
 };
 
 const cases = [
-  npmCase,
+  // npmCase,
   wikipediaCase,
   // pokedexCase,
   // stackOverflowCase,
@@ -370,7 +370,6 @@ const main = async () => {
         data: majority,
       };
       saveData('majority', ['answer', url, cs.questions.join('; ')], human);
-
 
       for (const question of cs.questions) {
         for (const [ai, aiOptions] of ais) {
