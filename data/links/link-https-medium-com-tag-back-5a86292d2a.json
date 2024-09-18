@@ -1,0 +1,8 @@
+[
+  {
+    "id": 21,
+    "url": "https://medium.com/@tamerardal/simplify-null-checks-in-java-writing-clean-code-with-apache-commons-lang-3-e7d3aea207bd?source=topic_portal_recommended_stories------backend---0-84----------backend----------9acf67a5_a8c7_4a3c_bb26_0ddc2f475736-------",
+    "html": "<a class=\"af ag ah ai aj ak al am an ao ap aq ar as at\" rel=\"noopener follow\" href=\"/@tamerardal/simplify-null-checks-in-java-writing-clean-code-with-apache-commons-lang-3-e7d3aea207bd?source=topic_portal_recommended_stories------backend---0-84----------backend----------9acf67a5_a8c7_4a3c_bb26_0ddc2f475736-------\"><div title=\"Simplify Null Checks in Java: Writing Clean Code with Apache Commons Lang 3\"><h2 class=\"bf oo lp lq op oq lr ls lt or os lu ot jx ou ov ow ox ka oy oz pa pb kd pc pd pe cm nt nu nw ny bk\">Simplify Null Checks in Java: Writing Clean Code with Apache Commons Lang 3</h2></div><div class=\"pf l\"><h3 class=\"bf b pg z cm ph nt nu pi nw ny fz\">In Java, null checks are generally done using == or&nbsp;!=. In addition, if we want to do an empty check, our condition will look like the…</h3></div></a>",
+    "text": "Simplify Null Checks in Java: Writing Clean Code with Apache Commons Lang 3In Java, null checks are generally done using == or !=. In addition, if we want to do an empty check, our condition will look"
+  }
+]

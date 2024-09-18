@@ -1,0 +1,14 @@
+[
+  {
+    "id": 2,
+    "url": "https://www.gutenberg.org/ebooks/subjects/search/?query=science",
+    "html": "<a class=\"link\" href=\"/ebooks/subjects/search/?query=science\" accesskey=\"1\">\n<span class=\"cell leftcell without-cover\">\n<span class=\"icon-wrapper\">\n<span class=\"icon icon_subject\"></span>\n</span>\n</span>\n<span class=\"cell content\">\n<span class=\"title\">Subjects</span>\n<span class=\"subtitle\">126 subject headings match your search.</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+    "text": "\n\n\n\n\n\n\nSubjects\n126 subject headings match your search.\n\n\n"
+  },
+  {
+    "id": 29,
+    "url": "https://www.gutenberg.org/ebooks/1228",
+    "html": "<a class=\"link\" href=\"/ebooks/1228\" accesskey=\"8\">\n<span class=\"cell leftcell with-cover\">\n<img class=\"cover-thumb\" src=\"/cache/epub/1228/pg1228.cover.small.jpg\" alt=\"\">\n</span>\n<span class=\"cell content\">\n<span class=\"title\">On the Origin of Species By Means of Natural Selection\n</span>\n<span class=\"subtitle\">Charles Darwin</span>\n<span class=\"extra\">3180 downloads</span>\n</span>\n<span class=\"hstrut\"></span>\n</a>",
+    "text": "\n\n\n\n\nOn the Origin of Species By Means of Natural Selection\n\nCharles Darwin\n3180 downloads\n\n\n"
+  }
+]
