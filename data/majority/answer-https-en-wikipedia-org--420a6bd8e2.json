@@ -4,7 +4,7 @@
     "What is the name of this Pokemon?": "Bramblin",
     "What is the Pokedex index number? Format: 4 digit number with leading zeros": "0946",
     "What is the type of this Pokemon?": "Grass / Ghost",
-    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "Bramblin",
+    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "N/A",
     "What is the next evolution of this Pokemon? Format: name only. Reply N/A if none": "Brambleghast"
   }
 }

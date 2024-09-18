@@ -9,7 +9,8 @@ import {
   Document,
   getAi,
   getFetcher,
-  getExtractor ,
+  getExtractor,
+  getMinimizer,
 } from 'foxtrot-ai';
 
 let cache = new DiskCache(
@@ -18,6 +19,7 @@ let cache = new DiskCache(
     {
       fetch: 10*24*3600,
       prompt: 10*24*3600,
+      min: 10*24*3600,
     }
   });
 // cache = null;
@@ -129,10 +131,10 @@ const mediumCase = {
   url: 'https://medium.com/tag/backend',
   crawl: 'Find links to articles tagged "backend" on Medium',
   questions: [
-    'What is the title of the article?',
-    'Who is the author of the article?',
-    'How many claps does the article have? Format: number',
-    'What is the publication date? Format: YYYY-MM-DD',
+    'What is the title of the main article?',
+    'Who is the author of the main article?',
+    'How many claps does the main article have? Format: number',
+    'What is the publication date of the main article? Format: YYYY-MM-DD',
   ],
 };
 
@@ -152,9 +154,9 @@ const gutenbergCase = {
   url: 'https://www.gutenberg.org/ebooks/search/?query=science',
   crawl: 'Find links to science-related books on Project Gutenberg',
   questions: [
-    'What is the title of the book?',
-    'Who is the author of the book?',
-    'What is the release date of the book? Format: YYYY-MM-DD',
+    'What is the title of the main book?',
+    'Who is the author of the main book?',
+    'What is the release date of the main book? Format: YYYY-MM-DD',
   ],
 };
 
@@ -164,7 +166,7 @@ const geniusCase = {
   questions: [
     'What is the title of the song?',
     'Who is the artist of the song?',
-    'How many views does the song have? Format: number. Expand abbreviations like "K" or "M"',
+    'How many views does the song have? Format: number, expand K and M',
     'When was the song released? Format: YYYY-MM-DD',
   ],
 };
@@ -180,21 +182,17 @@ const oldRedditCase = {
   ],
 };
 
-
-
-
 const cases = [
   npmCase,
   wikipediaCase,
-  pokedexCase,
-  stackOverflowCase,
-  imdbCase,
-  mediumCase,
-  hackerNewsCase,
-  gutenbergCase,
-  geniusCase,
-  oldRedditCase,
-
+  // pokedexCase,
+  // stackOverflowCase,
+  // imdbCase,
+  // mediumCase,
+  // hackerNewsCase,
+  // gutenbergCase,
+  // geniusCase,
+  // oldRedditCase,
 
   // These don't work well with fetch()
   // xCase,
@@ -204,36 +202,51 @@ const cases = [
 const crawlerAi = 'openai:gpt-4o';
 
 const ais = [
-  // 'human',
+  // ['human'],
 
-  'openai:gpt-4o-mini',
-  'openai:gpt-4o',
-  'openai:gpt-3.5-turbo',
-  'openai:gpt-4',
-  'openai:gpt-4-turbo',
+  ['openai:gpt-4o-mini'],
+  ['openai:gpt-4o'],
+  // ['openai:gpt-3.5-turbo'],
+  // ['openai:gpt-4'],
+  // ['openai:gpt-4-turbo'],
 
-  // 'mistral:mistral-large-latest',
+  // ['mistral:mistral-large-latest'],
 
-  // 'anthropic:claude-3-5-sonnet-20240620',
-  // 'anthropic:claude-3-haiku-20240307',
+  // ['anthropic:claude-3-5-sonnet-20240620'],
+  // ['anthropic:claude-3-haiku-20240307'],
 
-  // 'ollama:llama3.1:8b',
-  // 'ollama:llama3.1:70b',
-  // 'ollama:gemma2:27b',
-  // 'ollama:mistral-nemo',
-  // 'ollama:deepseek-coder-v2',
+  // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
+  // ['ollama:llama3.1:70b', { maxTokens: 50000 }],
+  // ['ollama:gemma2:27b'],
+  // ['ollama:mistral-nemo'],
+  // ['ollama:mistral-large'],
+  // ['ollama:deepseek-coder-v2'],
 
-  'ollama:codellama:13b',
-  'ollama:codellama:34b',
-  // 'ollama:codellama:70b',
+  // ['ollama:codellama:13b'],
+  // ['ollama:codellama:34b'],
+  // ['ollama:codellama:70b'],
+
+  // ['groq:llama3-8b-8192'],
+  // ['groq:llama3-70b-8192'],
 ];
 
 const extractors = [
-  // 'basic',
-  'iterative-prompt',
+  ['basic'],
+  // ['iterative-prompt'],
+  // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  // ['basic', getExtractor('basic')],
-  // ['iterative-prompt', getExtractor('iterative-prompt')],
+  ['min',
+   { minimizer: getMinimizer('simple', { cache }),
+     extractor: getExtractor('basic', { cache }),
+   },
+   'min-simple+basic'],
+
+  // ['min',
+  //  {
+  //    extractor: getExtractor('basic', { cache }),
+  //    minimizer: getMinimizer('ai', { ai: 'openai', cache }),
+  //  },
+  //  'min-ai'],
 ];
 
 const voteWeights = {
@@ -248,11 +261,15 @@ const voteWeights = {
   'openai:gpt-4-turbo/iterative-prompt': 1,
 }
 
+const makeKey = (ai, ex) => {
+  return ai  == 'human' ? 'human' : `${ai}/${ex}`;
+}
+
 const main = async () => {
   const scoreboard = {};
-  for (const ai of ais) {
-    for (const ex of extractors) {
-      const candidate = `${ai}/${ex}`;
+  for (const [ai, aiOptions] of ais) {
+    for (const [ex, exOptions, exLabel] of extractors) {
+      const candidate = makeKey(ai, exLabel || ex);
       scoreboard[candidate] = {
         total: 0,
         majority: 0,
@@ -262,44 +279,58 @@ const main = async () => {
 
   const results = {};
   const usage = {};
-  const took = {};
+  const cost = {};
+  const elapsed = {};
 
   const total = cases.length * ais.length * extractors.length;
   let count = 0;
 
   for (const cs of cases) {
-    for (const ai of ais) {
-      if (ai == 'human') {
-        results['human'] = getHuman(cs);
-        continue;
-      }
-
-      for (const ex of extractors) {
+    for (const [ai, aiOptions] of ais) {
+      for (const [ex, exOptions, exLabel] of extractors) {
         console.log('');
         console.log('');
         console.log(`Evaluating ${cs.url} -> ${ai}/${ex} (${++count}/${total})`);
 
-        const candidate = `${ai}/${ex}`;
+        if (ai == 'human') {
+          results.human = await getHuman(cs);
+        } else {
+          const candidate = makeKey(ai, exLabel || ex);
+          let evalResult;
 
-        const [r, u, t] = await evaluate(cs, ex, ai);
-        results[candidate] = r;
-        if (!usage[candidate]) {
-          usage[candidate] = u;
-        } else {
-          usage[candidate].output += u.output;
-          usage[candidate].input += u.input;
-          usage[candidate].total += u.total;
-        }
-        if (!took[candidate]) {
-          took[candidate] = t;
-        } else {
-          took[candidate] += t;
+          try {
+            evalResult = await evaluate(cs, ex, exOptions, ai, aiOptions);
+          } catch(e) {
+            console.log(`ERROR! Skip ${candidate}`);
+            continue;
+          }
+
+          const {
+            results: r,
+            usage: u,
+            cost: c,
+            elapsed: e,
+            took: t,
+          } = evalResult;
+
+          results[candidate] = r;
+
+          for (const [all, incr] of [[usage, u], [cost, c], [elapsed, e]]) {
+            if (!all[candidate]) {
+              all[candidate] = incr;
+            } else {
+              for (const k in incr) {
+                all[candidate][k] += incr[k];
+                all[candidate][k] += incr[k];
+                all[candidate][k] += incr[k];
+              }
+            }
+          }
         }
       }
     }
 
-    const key = `${ais[0]}/${extractors[0]}`;
-    console.log(key);
+    const key = makeKey(ais[0], extractors[0]);
     const first = results[key];
     const numItems = first.length;
 
@@ -308,9 +339,9 @@ const main = async () => {
 
       for (const question of cs.questions) {
         const votes = {};
-        for (const ai of ais) {
-          for (const ex of extractors) {
-            const candidate = `${ai}/${ex}`;
+        for (const [ai, aiOptions] of ais) {
+          for (const [ex, exOptions, exLabel] of extractors) {
+            const candidate = makeKey(ai, exLabel || ex);
             const weight = voteWeights[candidate];
             if (!weight) continue;
             const answer = results[candidate][i][question] || '(not found)';
@@ -340,13 +371,16 @@ const main = async () => {
       };
       saveData('majority', ['answer', url, cs.questions.join('; ')], human);
 
+
       for (const question of cs.questions) {
-        for (const ai of ais) {
-          for (const ex of extractors) {
-            const candidate = `${ai}/${ex}`;
-            const answer = results[candidate][i][question] || '(not found)';
+        for (const [ai, aiOptions] of ais) {
+          for (const [ex, exOptions, exLabel] of extractors) {
+            const candidate = makeKey(ai, exLabel || ex);
+            const item = results[candidate][i];
+            const answer = item[question] || '(not found)';
             scoreboard[candidate].total++;
-            if (answer == majority[question]) {
+            const correct = answer == majority[question];
+            if (correct) {
               scoreboard[candidate].majority++;
             }
           }
@@ -357,16 +391,19 @@ const main = async () => {
 
   console.log('\nusage:');
   console.log(JSON.stringify(usage, null, 2));
+  console.log('\ncost:');
+  console.log(JSON.stringify(cost, null, 2));
+  console.log('\ntime (seconds):');
+  console.log(JSON.stringify(elapsed, null, 2));
   console.log('\nscoreboard:');
   console.log(JSON.stringify(scoreboard, null, 2));
-  console.log('\ntime (seconds):');
-  console.log(JSON.stringify(took, null, 2));
 }
 
-const evaluate = async (cs, exStr, aiStr) => {
-  const ai = getAi(aiStr, { cache });
-  const ex = getExtractor(exStr, { ai, cache});
+const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
+  const ai = getAi(aiStr, { cache, ...aiOptions });
+  const ex = getExtractor(exStr, { ai, cache, ...exOptions });
   const fetcher = getFetcher('fetch', { cache });
+
   const results = [];
 
   const start = (new Date()).getTime() / 1000;
@@ -376,9 +413,7 @@ const evaluate = async (cs, exStr, aiStr) => {
   const links = await getLinks(cs.url, cs.crawl, numLinks);
 
   for (const link of links) {
-    console.log(`- ${link.url} -> ${aiStr}`);
-    // const ex = new BasicExtractor({ ai, fetcher, cache });
-
+    console.log(`- ${link.url} -> ai:${aiStr}/ex:${exStr}`);
     let doc;
     const saved = loadData('docs', ['doc', link.url]);
     if (saved) {
@@ -399,7 +434,14 @@ const evaluate = async (cs, exStr, aiStr) => {
   }
 
   const took = (new Date()).getTime() / 1000 - start;
-  return [results, ai.usage, took];
+
+  return {
+    results,
+    usage: ex.ai.usage,
+    cost: ex.ai.cost,
+    elapsed: ex.ai.elapsed,
+    took,
+  };
 }
 
 const getLinks = async (url, prompt, limit, save) => {
@@ -417,14 +459,12 @@ const getLinks = async (url, prompt, limit, save) => {
   return links;
 }
 
-const getHuman = (cs) => {
-  const links = loadData('links', ['link', cs.url, cs.crawl]);
+const getHuman = async (cs) => {
+  const links = await getLinks(cs.url, cs.crawl, numLinks);
 
   const results = [];
   for (const link of links) {
     const result = loadData('human', ['answer', link.url, cs.questions.join('; ')]);
-
-    console.log('result', result);
     results.push(result?.data || {});
   }
   return results;
