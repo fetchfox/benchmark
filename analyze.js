@@ -206,7 +206,7 @@ const ais = [
   ['human'],
 
   ['openai:gpt-4o-mini'],
-  ['openai:gpt-4o'],
+  // ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
@@ -236,11 +236,11 @@ const extractors = [
   // ['iterative-prompt'],
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  ['min',
-   { minimizer: getMinimizer('simple', { cache }),
-     extractor: getExtractor('basic', { cache }),
-   },
-   'min-simple+basic'],
+  // ['min',
+  //  { minimizer: getMinimizer('simple', { cache }),
+  //    extractor: getExtractor('basic', { cache }),
+  //  },
+  //  'min-simple+basic'],
 
   // ['min',
   //  {
@@ -297,10 +297,12 @@ const main = async () => {
         console.log('');
         console.log(`Evaluating ${cs.url} -> ${ai}/${ex} (${++count}/${total})`);
 
+        const candidate = makeKey(ai, exLabel || ex);
+        resetAgentDataForCase(cs, candidate);
+
         if (ai == 'human') {
           results.human = await getHuman(cs);
         } else {
-          const candidate = makeKey(ai, exLabel || ex);
           let evalResult;
 
           try {
@@ -309,6 +311,8 @@ const main = async () => {
             console.log(`ERROR! Skip ${candidate}`);
             continue;
           }
+
+          updateAgentDataForResult(cs, candidate, evalResult, results.human || []);
 
           const {
             results: r,
@@ -418,6 +422,7 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
 
   const links = await getLinks(cs.url, cs.crawl, numLinks);
 
+  const docs = [];
   for (const link of links) {
     console.log(`- ${link.url} -> ai:${aiStr}/ex:${exStr}`);
     let doc;
@@ -437,12 +442,14 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
     }
 
     results.push(item || {});
+    docs.push(doc);
   }
 
   const took = (new Date()).getTime() / 1000 - start;
 
   return {
     results,
+    docs,
     usage: ex.ai.usage,
     cost: ex.ai.cost,
     elapsed: ex.ai.elapsed,
@@ -513,10 +520,94 @@ const loadData = (subdir, keyArr, data) => {
   }
 }
 
+const resetAgentDataForCase = async (cs, agentId) => {
+  const filename = agentId.replace(/\.|\//g, '-') + '.json';
+  const filepath = path.join('./out/agents/', filename);
+  const ps = [
+    './out/agents',
+    './out/docs',
+  ];
+  for (const p of ps) {
+    if (!fs.existsSync(p)) {
+      fs.mkdirSync(p, { recursive: true });
+    }
+  }
+
+  // Get existing or initialize the data
+  let out;
+  if (fs.existsSync(filepath)) {
+    out = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+  } else {
+    out = { urls: [], scoreboard: {} };
+  }
+
+  // Remove this case's data, if it exists
+  out.urls = out.urls.filter(u => u != cs.url);
+  delete out.scoreboard[cs.url];
+
+  fs.writeFileSync(filepath, JSON.stringify(out, null, 2), 'utf8');
+}
+
+const updateAgentDataForResult = async (cs, agentId, result, expected) => {
+  if (!expected && expected.length) return;
+
+  const filename = agentId.replace(/\.|\//g, '-') + '.json';
+  const filepath = path.join('./out/agents/', filename);
+  const out = JSON.parse(fs.readFileSync(filepath, 'utf8'));
+
+  if (out.urls.includes(cs.url)) {
+    throw 'clear first';
+  }
+
+  console.log(JSON.stringify(result.results, null, 2));
+
+  const actual = result.results;
+  out.urls.push(cs.url);
+  out.scoreboard[cs.url] = [];
+  for (let i = 0; i < expected.length; i++) {
+    const score = {};
+    const url = result.docs[i].url
+    score.url = url;
+    score.expected = expected[i];
+    score.actual = actual[i];
+    score.correct = 0;
+    score.total = 0;
+    score.wrong = [];
+    for (const key of Object.keys(score.expected)) {
+      score.total++;
+      if (score.expected[key] == score.actual[key]) {
+        score.correct++;
+      } else {
+        score.wrong.push(key);
+      }
+    }
+    out.scoreboard[cs.url].push(score);
+  }
+
+  out.overall = { total: 0, correct: 0 };
+  for (let key of Object.keys(out.scoreboard)) {
+    out.overall.total += out.scoreboard[key].reduce((acc, x) => acc + x.total, 0);
+    out.overall.correct += out.scoreboard[key].reduce((acc, x) => acc + x.correct, 0);
+  }
+
+  // console.log(JSON.stringify(out, null, 2));
+  console.log(out.urls);
+
+  fs.writeFileSync(filepath, JSON.stringify(out, null, 2), 'utf8');
+
+  const agentsDir = './out/agents';
+  const caseFiles = fs.readdirSync(agentsDir)
+    .filter(file => file.endsWith('.json'))
+    .filter(file => file != 'list.json');
+  const listFilepath = path.join(agentsDir, 'list.json');
+  fs.writeFileSync(listFilepath, JSON.stringify(caseFiles, null, 2), 'utf8');
+
+  console.log(`File list saved to ${listFilepath}`);
+}
+
 const saveOutput = async (cs, answers, paths) => {
   const filename = (new URL(cs.url)).hostname.replace(/\./g, '-') + '.json';
   const filepath = path.join('./out/cases/', filename);
-
   const ps = [
     './out/cases',
     './out/docs',
