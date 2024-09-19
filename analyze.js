@@ -643,7 +643,7 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
     score.stats = result.stats[i];
     score.expected = expected[i];
     if (Object.keys(score.expected).length == 0) {
-      throw 'No keyes in expected answer';
+      throw 'No keys in expected answer';
     }
     score.actual = actual[i];
     score.correct = 0;
