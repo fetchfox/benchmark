@@ -5,7 +5,6 @@ import { URL } from 'url';
 
 import {
   Crawler,
-  BasicExtractor,
   DiskCache,
   Document,
   getAi,
@@ -18,7 +17,7 @@ let cache = new DiskCache(
   '/tmp/ft-analysis',
   { ttls:
     {
-      fetch: 10*24*3600,
+      fetch: 100*24*3600,
       prompt: 10*24*3600,
       min: 10*24*3600,
     }
@@ -189,11 +188,12 @@ const cases = [
   pokedexCase,
   stackOverflowCase,
   imdbCase,
-  // mediumCase,
   hackerNewsCase,
   gutenbergCase,
   geniusCase,
   oldRedditCase,
+
+  // mediumCase,
 
   // These don't work well with fetch()
   // xCase,
@@ -206,7 +206,7 @@ const ais = [
   ['human'],
 
   ['openai:gpt-4o-mini'],
-  // ['openai:gpt-4o'],
+  ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
@@ -232,19 +232,26 @@ const ais = [
 ];
 
 const extractors = [
-  ['basic'],
+  ['single-prompt'],
   // ['iterative-prompt'],
+
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('simple', { cache }),
-  //    extractor: getExtractor('basic', { cache }),
-  //  },
-  //  'min-simple+basic'],
+  ['min',
+   { minimizer: getMinimizer('tag-removing', { cache }),
+     extractor: getExtractor('single-prompt', { cache }),
+   },
+   'tag-removing+single-prompt'],
+
+  ['min',
+   { minimizer: getMinimizer('text-only', { cache }),
+     extractor: getExtractor('single-prompt', { cache }),
+   },
+   'text-only+single-prompt'],
 
   // ['min',
   //  {
-  //    extractor: getExtractor('basic', { cache }),
+  //    extractor: getExtractor('single', { cache }),
   //    minimizer: getMinimizer('ai', { ai: 'openai', cache }),
   //  },
   //  'min-ai'],
@@ -253,12 +260,12 @@ const extractors = [
 const voteWeights = {
   'human': 100,
 
-  'openai:gpt-4o/basic': 2,
-  'openai:gpt-4o-mini/basic': 2,
-  'openai:gpt-4-turbo/basic': 1,
+  'openai:gpt-4o/single-prompt': 2,
+  'openai:gpt-4o-mini/single-prompt': 2,
+  'openai:gpt-4-turbo/single-prompt': 1,
 
-  'openai:gpt-4o/min-simple+basic': 1,
-  'openai:gpt-4o-mini/min-simple+basic': 1,
+  'openai:gpt-4o/tag-removing+single-prompt': 1,
+  'openai:gpt-4o-mini/tag-removing+single-prompt': 1,
 
   'openai:gpt-4o/iterative-prompt': 2,
   'openai:gpt-4o-mini/iterative-prompt': 2,
@@ -309,6 +316,7 @@ const main = async () => {
             evalResult = await evaluate(cs, ex, exOptions, ai, aiOptions);
           } catch(e) {
             console.log(`ERROR! Skip ${candidate}`);
+            throw e;
             continue;
           }
 
@@ -395,8 +403,6 @@ const main = async () => {
         }
       }
     }
-
-    saveOutput(cs, results);
   }
 
   console.log('\nusage:');
@@ -414,15 +420,14 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
   const ex = getExtractor(exStr, { ai, cache, ...exOptions });
   const fetcher = getFetcher('fetch', { cache });
 
-  const results = [];
-
   const start = (new Date()).getTime() / 1000;
-
   let count = 0;
-
   const links = await getLinks(cs.url, cs.crawl, numLinks);
 
+  const results = [];
   const docs = [];
+  const stats = [];
+
   for (const link of links) {
     console.log(`- ${link.url} -> ai:${aiStr}/ex:${exStr}`);
     let doc;
@@ -435,8 +440,33 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
       saveData('docs', ['doc', link.url], doc.dump());
     }
 
+    const before = {
+      usage: Object.assign({}, ex.ai.usage),
+      cost: Object.assign({}, ex.ai.cost),
+      elapsed: Object.assign({}, ex.ai.elapsed),
+    };
     const item = await ex.one(doc, cs.questions);
-    console.log(item?.source().url + ' ->');
+    const after = {
+      usage: Object.assign({}, ex.ai.usage),
+      cost: Object.assign({}, ex.ai.cost),
+      elapsed: Object.assign({}, ex.ai.elapsed),
+    };
+
+    const delta = (d0, d1) => {
+      const d = {};
+      for (const k in d0) {
+        d[k] = d1[k] - d0[k];
+      }
+      return d;
+    }
+
+    stats.push({
+      usage: delta(before.usage, after.usage),
+      cost: delta(before.cost, after.cost),
+      elapsed: delta(before.elapsed, after.elapsed),
+    });
+
+    console.log(link.url + ' ->');
     for (const q in item) {
       console.log(`\t- ${'' + item[q].replaceAll('\n', '').substr(0, 80) + (item[q].length > 80 ? '...' : '')}`);
     }
@@ -447,13 +477,35 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
 
   const took = (new Date()).getTime() / 1000 - start;
 
+  const cleanTag = (s) => s.replaceAll('[', '').replaceAll(']', '');
+
+  const tags = {
+    ai: { provider: aiStr.split(':')[0], model: ai.model },
+    extractor: cleanTag('' + ex),
+  };
+
+  if ('' + ex == '[MinimizingExtractor]') {
+    tags.extractor = cleanTag('' + ex.extractor);
+    tags.minimizer = cleanTag('' + ex.minimizer);
+  }
+
+  const sum = (field) => stats.reduce((acc, x) => {
+    for (const k in x[field]) {
+      acc[k] ||= 0;
+      acc[k] += x[field][k];
+    }
+    return acc;
+  }, {});
+
   return {
     results,
+    stats,
     docs,
-    usage: ex.ai.usage,
-    cost: ex.ai.cost,
-    elapsed: ex.ai.elapsed,
+    usage: sum('usage'),
+    cost: sum('cost'),
+    elapsed: sum('elapsed'),
     took,
+    tags,
   };
 }
 
@@ -477,7 +529,8 @@ const getHuman = async (cs) => {
 
   const results = [];
   for (const link of links) {
-    const result = loadData('human', ['answer', link.url, cs.questions.join('; ')]);
+    const saved = loadData('docs', ['doc', link.url]);
+    const result = loadData('human', ['answer', saved.url, cs.questions.join('; ')]);
     results.push(result?.data || {});
   }
   return results;
@@ -538,7 +591,13 @@ const resetAgentDataForCase = async (cs, agentId) => {
   if (fs.existsSync(filepath)) {
     out = JSON.parse(fs.readFileSync(filepath, 'utf8'));
   } else {
-    out = { urls: [], scoreboard: {} };
+    out = { urls: [], scoreboard: {}, stats: {} };
+  }
+
+  const existing = out.scoreboard[cs.url];
+  if (existing && existing.length > numLinks) {
+    console.log('NOT resetting as we have more results saved. Remove file to override');
+    return;
   }
 
   // Remove this case's data, if it exists
@@ -555,20 +614,37 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
   const filepath = path.join('./out/agents/', filename);
   const out = JSON.parse(fs.readFileSync(filepath, 'utf8'));
 
+  out.id = agentId;
+  out.tags = result.tags || {};
+
+  const existing = out.scoreboard[cs.url];
+  if (existing && existing.length > numLinks) {
+    console.log('NOT saving as we have more results saved. Remove file to override');
+    return;
+  }
+
   if (out.urls.includes(cs.url)) {
     throw 'clear first';
   }
 
-  console.log(JSON.stringify(result.results, null, 2));
-
   const actual = result.results;
   out.urls.push(cs.url);
   out.scoreboard[cs.url] = [];
+  out.stats[cs.url] = {
+    usage: result.usage,
+    cost: result.cost,
+    elapsed: result.elapsed,
+  };
   for (let i = 0; i < expected.length; i++) {
+
     const score = {};
     const url = result.docs[i].url
     score.url = url;
+    score.stats = result.stats[i];
     score.expected = expected[i];
+    if (Object.keys(score.expected).length == 0) {
+      throw 'No keyes in expected answer';
+    }
     score.actual = actual[i];
     score.correct = 0;
     score.total = 0;
@@ -590,9 +666,6 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
     out.overall.correct += out.scoreboard[key].reduce((acc, x) => acc + x.correct, 0);
   }
 
-  // console.log(JSON.stringify(out, null, 2));
-  console.log(out.urls);
-
   fs.writeFileSync(filepath, JSON.stringify(out, null, 2), 'utf8');
 
   const agentsDir = './out/agents';
@@ -600,56 +673,6 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
     .filter(file => file.endsWith('.json'))
     .filter(file => file != 'list.json');
   const listFilepath = path.join(agentsDir, 'list.json');
-  fs.writeFileSync(listFilepath, JSON.stringify(caseFiles, null, 2), 'utf8');
-
-  console.log(`File list saved to ${listFilepath}`);
-}
-
-const saveOutput = async (cs, answers, paths) => {
-  const filename = (new URL(cs.url)).hostname.replace(/\./g, '-') + '.json';
-  const filepath = path.join('./out/cases/', filename);
-  const ps = [
-    './out/cases',
-    './out/docs',
-  ];
-  for (const p of ps) {
-    if (!fs.existsSync(p)) {
-      fs.mkdirSync(p, { recursive: true });
-    }
-  }
-
-  console.log('save to', filepath);
-
-  const links = await getLinks(cs.url, cs.crawl, numLinks);
-  const docs = [];
-  const urls = [];
-
-  for (const link of links) {
-    const doc = new Document();
-    doc.loadData(loadData('docs', ['doc', link.url]));
-    const docFilename = generateKey(['doc', link.url]);
-    const docFilepath = path.join('docs/', docFilename); // relative
-    fs.writeFileSync(
-      path.join('./out', docFilepath),
-      JSON.stringify(doc.dump(), null, 2), 'utf8');
-
-    docs.push(docFilepath);
-    urls.push(link.url);
-  }
-
-  const csOut = Object.assign(
-    {},
-    cs,
-    { docs, answers, urls });
-
-  const outPath = JSON.stringify(csOut, null, 2);
-  fs.writeFileSync(filepath, outPath, 'utf8');
-
-  const casesDir = './out/cases';
-  const caseFiles = fs.readdirSync(casesDir)
-    .filter(file => file.endsWith('.json'))
-    .filter(file => file != 'list.json');
-  const listFilepath = path.join(casesDir, 'list.json');
   fs.writeFileSync(listFilepath, JSON.stringify(caseFiles, null, 2), 'utf8');
 
   console.log(`File list saved to ${listFilepath}`);
