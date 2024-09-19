@@ -1,0 +1,10 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Munna_(Pok%C3%A9mon)",
+  "data": {
+    "What is the name of this Pokemon?": "Munna",
+    "What is the Pokedex index number? Format: 4 digit number with leading zeros": "0517",
+    "What is the type of this Pokemon?": "Psychic",
+    "What is the previous evolution of this Pokemon? Format: name only. Reply N/A if none": "N/A",
+    "What is the next evolution of this Pokemon? Format: name only. Reply N/A if none": "Musharna"
+  }
+}
