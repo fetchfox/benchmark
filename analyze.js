@@ -152,7 +152,7 @@ const hackerNewsCase = {
 
 const gutenbergCase = {
   url: 'https://www.gutenberg.org/ebooks/search/?query=science',
-  crawl: 'Find links to science-related books on Project Gutenberg',
+  crawl: 'Find links to science-related books on Project Gutenberg. The links MUST have the format /ebook/{number}',
   questions: [
     'What is the title of the main book?',
     'Who is the author of the main book?',
@@ -206,7 +206,7 @@ const ais = [
   ['human'],
 
   ['openai:gpt-4o-mini'],
-  ['openai:gpt-4o'],
+  // ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
@@ -216,19 +216,19 @@ const ais = [
   // ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
 
-  // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
+  ['ollama:llama3.1:8b', { maxTokens: 10000 }],
   // ['ollama:llama3.1:70b', { maxTokens: 50000 }],
   // ['ollama:gemma2:27b'],
   // ['ollama:mistral-nemo'],
   // ['ollama:mistral-large'],
   // ['ollama:deepseek-coder-v2'],
 
-  // ['ollama:codellama:13b'],
-  // ['ollama:codellama:34b'],
+  ['ollama:codellama:13b'],
+  ['ollama:codellama:34b'],
   // ['ollama:codellama:70b'],
 
-  // ['groq:llama3-8b-8192'],
-  // ['groq:llama3-70b-8192'],
+  ['groq:llama3-8b-8192'],
+  ['groq:llama3-70b-8192'],
 ];
 
 const extractors = [
@@ -237,17 +237,36 @@ const extractors = [
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
+  // ['min',
+  //  { minimizer: getMinimizer('tag-removing', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'tag-removing+single-prompt'],
+
+  // ['min',
+  //  { minimizer: getMinimizer('text-only', { cache }),
+  //    extractor: getExtractor('single-prompt', { cache }),
+  //  },
+  //  'text-only+single-prompt'],
+
   ['min',
-   { minimizer: getMinimizer('tag-removing', { cache }),
+   { minimizer: getMinimizer('extractus', { cache }),
      extractor: getExtractor('single-prompt', { cache }),
    },
-   'tag-removing+single-prompt'],
+   'extractus+single-prompt'],
+
+
+  ['min',
+   { minimizer: getMinimizer('tag-removing', { cache }),
+     extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+   },
+   'tag-removing+iterative-prompt'],
 
   ['min',
    { minimizer: getMinimizer('text-only', { cache }),
-     extractor: getExtractor('single-prompt', { cache }),
+     extractor: getExtractor('iterative-prompt', { cache }),
    },
-   'text-only+single-prompt'],
+   'text-only+iterative-prompt'],
 
   // ['min',
   //  {
@@ -316,7 +335,7 @@ const main = async () => {
             evalResult = await evaluate(cs, ex, exOptions, ai, aiOptions);
           } catch(e) {
             console.log(`ERROR! Skip ${candidate}`);
-            throw e;
+            // throw e;
             continue;
           }
 
@@ -392,7 +411,7 @@ const main = async () => {
         for (const [ai, aiOptions] of ais) {
           for (const [ex, exOptions, exLabel] of extractors) {
             const candidate = makeKey(ai, exLabel || ex);
-            const item = results[candidate][i];
+            const item = results[candidate] ? results[candidate][i] : {};
             const answer = item[question] || '(not found)';
             scoreboard[candidate].total++;
             const correct = answer == majority[question];
@@ -417,6 +436,10 @@ const main = async () => {
 
 const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
   const ai = getAi(aiStr, { cache, ...aiOptions });
+  if (exOptions?.extractorFn) {
+    exOptions = Object.assign({}, exOptions);
+    exOptions.extractor = exOptions.extractorFn(ai);
+  }
   const ex = getExtractor(exStr, { ai, cache, ...exOptions });
   const fetcher = getFetcher('fetch', { cache });
 
@@ -429,7 +452,7 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
   const stats = [];
 
   for (const link of links) {
-    console.log(`- ${link.url} -> ai:${aiStr}/ex:${exStr}`);
+    const innerStart = (new Date()).getTime() / 1000;
     let doc;
     const saved = loadData('docs', ['doc', link.url]);
     if (saved) {
@@ -466,13 +489,11 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
       elapsed: delta(before.elapsed, after.elapsed),
     });
 
-    console.log(link.url + ' ->');
-    for (const q in item) {
-      console.log(`\t- ${'' + item[q].replaceAll('\n', '').substr(0, 80) + (item[q].length > 80 ? '...' : '')}`);
-    }
-
     results.push(item || {});
     docs.push(doc);
+
+    const innerTook = '(' + Number((new Date()).getTime() / 1000 - innerStart).toFixed(2) + ' sec)';
+    console.log(`- ${link.url} -> ai:${aiStr}/ex:${exStr} ${innerTook}`);
   }
 
   const took = (new Date()).getTime() / 1000 - start;
