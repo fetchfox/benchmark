@@ -205,30 +205,30 @@ const crawlerAi = 'openai:gpt-4o';
 const ais = [
   ['human'],
 
-  ['openai:gpt-4o-mini'],
+  // ['openai:gpt-4o-mini'],
   // ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
 
-  // ['mistral:mistral-large-latest'],
+  ['mistral:mistral-large-latest'],
 
   // ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
 
-  ['ollama:llama3.1:8b', { maxTokens: 10000 }],
+  // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
   // ['ollama:llama3.1:70b', { maxTokens: 50000 }],
   // ['ollama:gemma2:27b'],
   // ['ollama:mistral-nemo'],
   // ['ollama:mistral-large'],
   // ['ollama:deepseek-coder-v2'],
 
-  ['ollama:codellama:13b'],
-  ['ollama:codellama:34b'],
+  // ['ollama:codellama:13b'],
+  // ['ollama:codellama:34b'],
   // ['ollama:codellama:70b'],
 
-  ['groq:llama3-8b-8192'],
-  ['groq:llama3-70b-8192'],
+  // ['groq:llama3-8b-8192'],
+  // ['groq:llama3-70b-8192'],
 ];
 
 const extractors = [
@@ -237,41 +237,40 @@ const extractors = [
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('tag-removing', { cache }),
-  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-  //  },
-  //  'tag-removing+single-prompt'],
-
-  // ['min',
-  //  { minimizer: getMinimizer('text-only', { cache }),
-  //    extractor: getExtractor('single-prompt', { cache }),
-  //  },
-  //  'text-only+single-prompt'],
-
-  ['min',
-   { minimizer: getMinimizer('extractus', { cache }),
-     extractor: getExtractor('single-prompt', { cache }),
-   },
-   'extractus+single-prompt'],
-
-
   ['min',
    { minimizer: getMinimizer('tag-removing', { cache }),
-     extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
    },
-   'tag-removing+iterative-prompt'],
+   'tag-removing+single-prompt'],
 
   ['min',
    { minimizer: getMinimizer('text-only', { cache }),
-     extractor: getExtractor('iterative-prompt', { cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
    },
-   'text-only+iterative-prompt'],
+   'text-only+single-prompt'],
+
+  // ['min',
+  //  { minimizer: getMinimizer('extractus', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'extractus+single-prompt'],
+
+  // ['min',
+  //  { minimizer: getMinimizer('tag-removing', { cache }),
+  //    extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+  //  },
+  //  'tag-removing+iterative-prompt'],
+
+  // ['min',
+  //  { minimizer: getMinimizer('text-only', { cache }),
+  //    extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+  //  },
+  //  'text-only+iterative-prompt'],
 
   // ['min',
   //  {
-  //    extractor: getExtractor('single', { cache }),
   //    minimizer: getMinimizer('ai', { ai: 'openai', cache }),
+  //    extractorFn: (ai) => getExtractor('single', { ai, cache }),
   //  },
   //  'min-ai'],
 ];
@@ -328,6 +327,7 @@ const main = async () => {
 
         if (ai == 'human') {
           results.human = await getHuman(cs);
+          console.log('Human said:', results.human);
         } else {
           let evalResult;
 
@@ -335,7 +335,6 @@ const main = async () => {
             evalResult = await evaluate(cs, ex, exOptions, ai, aiOptions);
           } catch(e) {
             console.log(`ERROR! Skip ${candidate}`);
-            // throw e;
             continue;
           }
 
@@ -551,7 +550,7 @@ const getHuman = async (cs) => {
   const results = [];
   for (const link of links) {
     const saved = loadData('docs', ['doc', link.url]);
-    const result = loadData('human', ['answer', saved.url, cs.questions.join('; ')]);
+    const result = loadData('human', ['answer', saved ? saved.url : link.url, cs.questions.join('; ')]);
     results.push(result?.data || {});
   }
   return results;
@@ -663,9 +662,9 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
     score.url = url;
     score.stats = result.stats[i];
     score.expected = expected[i];
-    if (Object.keys(score.expected).length == 0) {
-      throw 'No keys in expected answer';
-    }
+    // if (Object.keys(score.expected).length == 0) {
+    //   throw 'No keys in expected answer';
+    // }
     score.actual = actual[i];
     score.correct = 0;
     score.total = 0;
