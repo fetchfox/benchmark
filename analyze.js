@@ -205,30 +205,30 @@ const crawlerAi = 'openai:gpt-4o';
 const ais = [
   ['human'],
 
-  // ['openai:gpt-4o-mini'],
-  // ['openai:gpt-4o'],
+  ['openai:gpt-4o-mini'],
+  ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
 
-  ['mistral:mistral-large-latest'],
+  // ['mistral:mistral-large-latest'],
 
   // ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
 
-  // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
+  ['ollama:llama3.1:8b', { maxTokens: 10000 }],
   // ['ollama:llama3.1:70b', { maxTokens: 50000 }],
   // ['ollama:gemma2:27b'],
   // ['ollama:mistral-nemo'],
   // ['ollama:mistral-large'],
   // ['ollama:deepseek-coder-v2'],
 
-  // ['ollama:codellama:13b'],
-  // ['ollama:codellama:34b'],
+  ['ollama:codellama:13b'],
+  ['ollama:codellama:34b'],
   // ['ollama:codellama:70b'],
 
-  // ['groq:llama3-8b-8192'],
-  // ['groq:llama3-70b-8192'],
+  ['groq:llama3-8b-8192'],
+  ['groq:llama3-70b-8192'],
 ];
 
 const extractors = [
@@ -249,17 +249,17 @@ const extractors = [
    },
    'text-only+single-prompt'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('extractus', { cache }),
-  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-  //  },
-  //  'extractus+single-prompt'],
+  ['min',
+   { minimizer: getMinimizer('extractus', { cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+   },
+   'extractus+single-prompt'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('tag-removing', { cache }),
-  //    extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
-  //  },
-  //  'tag-removing+iterative-prompt'],
+  ['min',
+   { minimizer: getMinimizer('tag-removing', { cache }),
+     extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+   },
+   'tag-removing+iterative-prompt'],
 
   // ['min',
   //  { minimizer: getMinimizer('text-only', { cache }),
