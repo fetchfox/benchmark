@@ -18,7 +18,7 @@ let cache = new DiskCache(
   { ttls:
     {
       fetch: 100*24*3600,
-      prompt: 10*24*3600,
+      prompt: 100*24*3600,
       min: 10*24*3600,
     }
   });
