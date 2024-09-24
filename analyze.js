@@ -25,6 +25,7 @@ let cache = new DiskCache(
 // cache = null;
 
 const fetcher = getFetcher('fetch', { cache });
+// const fetcher = getFetcher('puppeteer', { cache });
 const numLinks = 10;
 
 // For each extrator/model pair, we want:
@@ -39,7 +40,7 @@ const npmCase = {
     'What is the GitHub URL of this package?',
     'What is the curent version of this package?',
     'How many weekly downloads does this package have? Format: number',
-    'What is the unpacked size of this package, in bytes? Format: number',
+    'What is the unpacked size of this package? Keep original formatting and units',
     'What is the license?',
   ],
 };
@@ -184,14 +185,14 @@ const oldRedditCase = {
 
 const cases = [
   npmCase,
-  wikipediaCase,
-  pokedexCase,
-  stackOverflowCase,
-  imdbCase,
-  hackerNewsCase,
-  gutenbergCase,
-  geniusCase,
-  oldRedditCase,
+  // wikipediaCase,
+  // pokedexCase,
+  // stackOverflowCase,
+  // imdbCase,
+  // hackerNewsCase,
+  // gutenbergCase,
+  // geniusCase,
+  // oldRedditCase,
 
   // mediumCase,
 
@@ -205,30 +206,31 @@ const crawlerAi = 'openai:gpt-4o';
 const ais = [
   ['human'],
 
-  ['openai:gpt-4o-mini'],
-  ['openai:gpt-4o'],
+  // ['openai:gpt-4o-mini'],
+  // ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
 
   // ['mistral:mistral-large-latest'],
 
-  // ['anthropic:claude-3-5-sonnet-20240620'],
+  ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
 
-  ['ollama:llama3.1:8b', { maxTokens: 10000 }],
+  // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
   // ['ollama:llama3.1:70b', { maxTokens: 50000 }],
   // ['ollama:gemma2:27b'],
   // ['ollama:mistral-nemo'],
   // ['ollama:mistral-large'],
   // ['ollama:deepseek-coder-v2'],
 
-  ['ollama:codellama:13b'],
-  ['ollama:codellama:34b'],
+  // ['ollama:codellama:13b'],
+  // ['ollama:codellama:34b'],
   // ['ollama:codellama:70b'],
 
   ['groq:llama3-8b-8192'],
-  ['groq:llama3-70b-8192'],
+  // ['groq:llama3-70b-8192'],
+  // ['groq:llama-3.1-8b-instant'],
 ];
 
 const extractors = [
@@ -237,29 +239,29 @@ const extractors = [
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  ['min',
-   { minimizer: getMinimizer('tag-removing', { cache }),
-     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-   },
-   'tag-removing+single-prompt'],
+  // ['min',
+  //  { minimizer: getMinimizer('tag-removing', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'tag-removing+single-prompt'],
 
-  ['min',
-   { minimizer: getMinimizer('text-only', { cache }),
-     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-   },
-   'text-only+single-prompt'],
+  // ['min',
+  //  { minimizer: getMinimizer('text-only', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'text-only+single-prompt'],
 
-  ['min',
-   { minimizer: getMinimizer('extractus', { cache }),
-     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-   },
-   'extractus+single-prompt'],
+  // ['min',
+  //  { minimizer: getMinimizer('extractus', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'extractus+single-prompt'],
 
-  ['min',
-   { minimizer: getMinimizer('tag-removing', { cache }),
-     extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
-   },
-   'tag-removing+iterative-prompt'],
+  // ['min',
+  //  { minimizer: getMinimizer('tag-removing', { cache }),
+  //    extractorFn: (ai) => getExtractor('iterative-prompt', { ai, cache }),
+  //  },
+  //  'tag-removing+iterative-prompt'],
 
   // ['min',
   //  { minimizer: getMinimizer('text-only', { cache }),
@@ -335,8 +337,11 @@ const main = async () => {
             evalResult = await evaluate(cs, ex, exOptions, ai, aiOptions);
           } catch(e) {
             console.log(`ERROR! Skip ${candidate}`);
+            throw e;
             continue;
           }
+
+          console.log('evalResult', evalResult.results);
 
           updateAgentDataForResult(cs, candidate, evalResult, results.human || []);
 
@@ -365,8 +370,9 @@ const main = async () => {
       }
     }
 
-    const key = makeKey(ais[0], extractors[0]);
-    const first = results[key];
+    const firstKey = makeKey(ais.filter(x => x != 'human')[0], extractors[0]);
+    console.log('FIRST', firstKey);
+    const first = results[firstKey];
     const numItems = first.length;
 
     for (let i = 0; i < numItems; i++) {
@@ -379,7 +385,10 @@ const main = async () => {
             const candidate = makeKey(ai, exLabel || ex);
             const weight = voteWeights[candidate];
             if (!weight) continue;
-            const answer = results[candidate][i][question] || '(not found)';
+            const answer = basicClean(results[candidate][i][question]);
+            if (!answer) continue;
+            console.log('voting:', candidate, weight, answer);
+
             votes[answer] ||= 0;
             votes[answer] += weight;
           }
@@ -405,6 +414,7 @@ const main = async () => {
         data: majority,
       };
       saveData('majority', ['answer', url, cs.questions.join('; ')], human);
+      console.log('item', item);
 
       for (const question of cs.questions) {
         for (const [ai, aiOptions] of ais) {
@@ -413,9 +423,12 @@ const main = async () => {
             const item = results[candidate] ? results[candidate][i] : {};
             const answer = item[question] || '(not found)';
             scoreboard[candidate].total++;
-            const correct = answer == majority[question];
+            const correct = basicClean(answer) == basicClean(majority[question]);
             if (correct) {
               scoreboard[candidate].majority++;
+            } else {
+
+              console.log('WRONG!', answer, majority[question]);
             }
           }
         }
@@ -468,6 +481,10 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
       elapsed: Object.assign({}, ex.ai.elapsed),
     };
     const item = await ex.one(doc, cs.questions);
+    console.log('item', item);
+
+    throw 'yyy';
+
     const after = {
       usage: Object.assign({}, ex.ai.usage),
       cost: Object.assign({}, ex.ai.cost),
@@ -578,6 +595,9 @@ const saveData = (subdir, keyArr, data) => {
   if (!fs.existsSync(path.dirname(filepath))) {
     fs.mkdirSync(path.dirname(filepath), { recursive: true });
   }
+
+  console.log('save to', filepath, data);
+
   fs.writeFileSync(filepath, JSON.stringify(data, null, 2), 'utf8');
 }
 
@@ -671,7 +691,7 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
     score.wrong = [];
     for (const key of Object.keys(score.expected)) {
       score.total++;
-      if (score.expected[key] == score.actual[key]) {
+      if (basicClean(score.expected[key]) == basicClean(score.actual[key])) {
         score.correct++;
       } else {
         score.wrong.push(key);
@@ -696,6 +716,13 @@ const updateAgentDataForResult = async (cs, agentId, result, expected) => {
   fs.writeFileSync(listFilepath, JSON.stringify(caseFiles, null, 2), 'utf8');
 
   console.log(`File list saved to ${listFilepath}`);
+}
+
+const basicClean = (str) => {
+  if (typeof str === 'string' && /^[0-9,]+$/.test(str)) {
+    return str.replace(/,/g, '');
+  }
+  return str;
 }
 
 main();
