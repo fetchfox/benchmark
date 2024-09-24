@@ -22,7 +22,7 @@ let cache = new DiskCache(
       min: 10*24*3600,
     }
   });
-// cache = null;
+cache = null;
 
 const fetcher = getFetcher('fetch', { cache });
 // const fetcher = getFetcher('puppeteer', { cache });
@@ -186,13 +186,13 @@ const oldRedditCase = {
 const cases = [
   npmCase,
   // wikipediaCase,
-  // pokedexCase,
-  // stackOverflowCase,
-  // imdbCase,
-  // hackerNewsCase,
-  // gutenbergCase,
-  // geniusCase,
-  // oldRedditCase,
+  pokedexCase,
+  stackOverflowCase,
+  imdbCase,
+  hackerNewsCase,
+  gutenbergCase,
+  geniusCase,
+  oldRedditCase,
 
   // mediumCase,
 
@@ -214,7 +214,10 @@ const ais = [
 
   // ['mistral:mistral-large-latest'],
 
-  ['anthropic:claude-3-5-sonnet-20240620'],
+  ['google:gemini-1.5-flash'],
+  // ['google:gemini-1.5-pro'],
+
+  // ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
 
   // ['ollama:llama3.1:8b', { maxTokens: 10000 }],
@@ -228,7 +231,7 @@ const ais = [
   // ['ollama:codellama:34b'],
   // ['ollama:codellama:70b'],
 
-  ['groq:llama3-8b-8192'],
+  // ['groq:llama3-8b-8192'],
   // ['groq:llama3-70b-8192'],
   // ['groq:llama-3.1-8b-instant'],
 ];
@@ -239,17 +242,17 @@ const extractors = [
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('tag-removing', { cache }),
-  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-  //  },
-  //  'tag-removing+single-prompt'],
+  ['min',
+   { minimizer: getMinimizer('tag-removing', { cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+   },
+   'tag-removing+single-prompt'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('text-only', { cache }),
-  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-  //  },
-  //  'text-only+single-prompt'],
+  ['min',
+   { minimizer: getMinimizer('text-only', { cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+   },
+   'text-only+single-prompt'],
 
   // ['min',
   //  { minimizer: getMinimizer('extractus', { cache }),
@@ -329,7 +332,6 @@ const main = async () => {
 
         if (ai == 'human') {
           results.human = await getHuman(cs);
-          console.log('Human said:', results.human);
         } else {
           let evalResult;
 
@@ -340,8 +342,6 @@ const main = async () => {
             throw e;
             continue;
           }
-
-          console.log('evalResult', evalResult.results);
 
           updateAgentDataForResult(cs, candidate, evalResult, results.human || []);
 
@@ -370,8 +370,10 @@ const main = async () => {
       }
     }
 
-    const firstKey = makeKey(ais.filter(x => x != 'human')[0], extractors[0]);
-    console.log('FIRST', firstKey);
+    const firstKey = makeKey(
+      ais.filter(x => x != 'human')[0],
+      extractors[0].length == 1 ? extractors[0][0] : extractors[0][2]);
+
     const first = results[firstKey];
     const numItems = first.length;
 
@@ -387,8 +389,6 @@ const main = async () => {
             if (!weight) continue;
             const answer = basicClean(results[candidate][i][question]);
             if (!answer) continue;
-            console.log('voting:', candidate, weight, answer);
-
             votes[answer] ||= 0;
             votes[answer] += weight;
           }
@@ -427,8 +427,6 @@ const main = async () => {
             if (correct) {
               scoreboard[candidate].majority++;
             } else {
-
-              console.log('WRONG!', answer, majority[question]);
             }
           }
         }
@@ -481,10 +479,6 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
       elapsed: Object.assign({}, ex.ai.elapsed),
     };
     const item = await ex.one(doc, cs.questions);
-    console.log('item', item);
-
-    throw 'yyy';
-
     const after = {
       usage: Object.assign({}, ex.ai.usage),
       cost: Object.assign({}, ex.ai.cost),
@@ -552,7 +546,7 @@ const getLinks = async (url, prompt, limit, save) => {
     return saved;
   }
 
-  const crawler = new Crawler(crawlerAi, { fetcher, cache });
+  const crawler = new Crawler({ ai: crawlerAi, fetcher, cache });
   const resp = await crawler.all(url, prompt, { limit });
   const links = resp.map(x => x.link);
 

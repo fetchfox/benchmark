@@ -1,16 +1,16 @@
 {
   "url": "?",
   "data": {
-    "Name": "Kommo-o",
-    "Number (include leading zeros)": "0784",
-    "Type": "Dragon Fighting",
-    "Species": "Scaly Pokémon",
-    "Height (m)": "1.6",
-    "Weight (kg)": "78.2",
-    "Base HP": "75",
-    "Base Attack": "110",
-    "Base Defense": "125",
-    "% Male, Format: XX.X": "50.0",
-    "% Female, Format: XX.X": "50.0"
+    "Name": "Magneton",
+    "Number (include leading zeros)": "0082",
+    "Type": "Electric / Steel",
+    "Species": "Magnet Pokémon",
+    "Height (m)": "1.0",
+    "Weight (kg)": "60.0",
+    "Base HP": "50",
+    "Base Attack": "60",
+    "Base Defense": "95",
+    "% Male, Format: XX.X": "(not found)",
+    "% Female, Format: XX.X": "(not found)"
   }
 }
