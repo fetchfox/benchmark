@@ -1,0 +1,32 @@
+[
+  {
+    "id": 21,
+    "url": "https://www.battlemetrics.com/players/1148694354",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1148694354\">kenai</a>",
+    "text": "kenai",
+    "usage": {
+      "input": 3035,
+      "output": 14,
+      "total": 3049
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 26,
+    "url": "https://www.battlemetrics.com/players/1101999607",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1101999607\">DatSkidderBoi350</a>",
+    "text": "DatSkidderBoi350",
+    "usage": {
+      "input": 3035,
+      "output": 14,
+      "total": 3049
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  }
+]

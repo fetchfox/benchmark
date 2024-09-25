@@ -1,16 +1,16 @@
 {
   "url": "?",
   "data": {
-    "Name": "Magneton",
-    "Number (include leading zeros)": "0082",
-    "Type": "Electric / Steel",
-    "Species": "Magnet Pokémon",
-    "Height (m)": "1.0",
-    "Weight (kg)": "60.0",
-    "Base HP": "50",
-    "Base Attack": "60",
-    "Base Defense": "95",
-    "% Male, Format: XX.X": "(not found)",
-    "% Female, Format: XX.X": "(not found)"
+    "Name": "Inteleon",
+    "Number (include leading zeros)": "0818",
+    "Type": "Water",
+    "Species": "Secret Agent Pokémon",
+    "Height (m)": "1.9",
+    "Weight (kg)": "45.2",
+    "Base HP": "70",
+    "Base Attack": "85",
+    "Base Defense": "65",
+    "% Male, Format: XX.X": "87.5",
+    "% Female, Format: XX.X": "12.5"
   }
 }

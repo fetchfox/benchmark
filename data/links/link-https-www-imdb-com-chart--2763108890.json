@@ -1,0 +1,47 @@
+[
+  {
+    "id": 80,
+    "url": "https://www.imdb.com/title/tt0816692/?ref_=chttp_i_19",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0816692/?ref_=chttp_i_19\" aria-label=\"View title page for Interstellar\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": "",
+    "usage": {
+      "input": 12801,
+      "output": 21,
+      "total": 12822
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 89,
+    "url": "https://www.imdb.com/title/tt0102926/?ref_=chttp_t_23",
+    "html": "<a href=\"/title/tt0102926/?ref_=chttp_t_23\" class=\"ipc-title-link-wrapper\" tabindex=\"0\"><h3 class=\"ipc-title__text\">23. The Silence of the Lambs</h3></a>",
+    "text": "23. The Silence of the Lambs",
+    "usage": {
+      "input": 12801,
+      "output": 21,
+      "total": 12822
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 92,
+    "url": "https://www.imdb.com/title/tt0317248/?ref_=chttp_i_25",
+    "html": "<a class=\"ipc-lockup-overlay ipc-focusable\" href=\"/title/tt0317248/?ref_=chttp_i_25\" aria-label=\"View title page for City of God\"><div class=\"ipc-lockup-overlay__screen\"></div></a>",
+    "text": "",
+    "usage": {
+      "input": 12801,
+      "output": 21,
+      "total": 12822
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  }
+]

@@ -14,7 +14,7 @@ import {
 } from 'foxtrot-ai';
 
 let cache = new DiskCache(
-  '/tmp/ft-analysis',
+  '/tmp/ft-analysis-2',
   { ttls:
     {
       fetch: 100*24*3600,
@@ -22,7 +22,7 @@ let cache = new DiskCache(
       min: 10*24*3600,
     }
   });
-cache = null;
+// cache = null;
 
 const fetcher = getFetcher('fetch', { cache });
 // const fetcher = getFetcher('puppeteer', { cache });
@@ -183,16 +183,32 @@ const oldRedditCase = {
   ],
 };
 
+const battleMetricsCase = {
+  url: 'https://www.battlemetrics.com/players?filter%5BplayerFlags%5D=&sort=-lastSeen',
+  crawl: 'Find links to players. Must have format /players/{number}',
+  questions: [
+    `What is the player's username?`,
+    `How many servers has this player been seen on?`,
+    `What is the first seen date?`,
+    `What is the last seen date?`,
+    `What is the current server?`,
+    `What is the play time per server?`,
+    `What is the first seen info for each server?`,
+  ],
+}
+
 const cases = [
-  npmCase,
+  // npmCase,
   // wikipediaCase,
-  pokedexCase,
-  stackOverflowCase,
-  imdbCase,
-  hackerNewsCase,
-  gutenbergCase,
-  geniusCase,
-  oldRedditCase,
+  // pokedexCase,
+  // stackOverflowCase,
+  // imdbCase,
+  // hackerNewsCase,
+  // gutenbergCase,
+  // geniusCase,
+  // oldRedditCase,
+
+  battleMetricsCase,
 
   // mediumCase,
 
@@ -206,7 +222,7 @@ const crawlerAi = 'openai:gpt-4o';
 const ais = [
   ['human'],
 
-  // ['openai:gpt-4o-mini'],
+  ['openai:gpt-4o-mini'],
   // ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
@@ -237,16 +253,16 @@ const ais = [
 ];
 
 const extractors = [
-  ['single-prompt'],
+  // ['single-prompt'],
   // ['iterative-prompt'],
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  ['min',
-   { minimizer: getMinimizer('tag-removing', { cache }),
-     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-   },
-   'tag-removing+single-prompt'],
+  // ['min',
+  //  { minimizer: getMinimizer('tag-removing', { cache }),
+  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+  //  },
+  //  'tag-removing+single-prompt'],
 
   ['min',
    { minimizer: getMinimizer('text-only', { cache }),
@@ -499,6 +515,10 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
       elapsed: delta(before.elapsed, after.elapsed),
     });
 
+    // console.log('stats cost:', stats);
+    // console.log('stats cost:', stats[0].cost.total * 1000);
+    // throw 'mmmm';
+
     results.push(item || {});
     docs.push(doc);
 
@@ -542,13 +562,12 @@ const evaluate = async (cs, exStr, exOptions, aiStr, aiOptions) => {
 
 const getLinks = async (url, prompt, limit, save) => {
   const saved = loadData('links', ['link', url, prompt, limit]);
-  if (saved) {
+  if (saved && saved[0]) {
     return saved;
   }
 
   const crawler = new Crawler({ ai: crawlerAi, fetcher, cache });
-  const resp = await crawler.all(url, prompt, { limit });
-  const links = resp.map(x => x.link);
+  const links = await crawler.all(url, prompt, { limit });
 
   saveData('links', ['link', url, prompt, limit], links);
 
@@ -589,8 +608,6 @@ const saveData = (subdir, keyArr, data) => {
   if (!fs.existsSync(path.dirname(filepath))) {
     fs.mkdirSync(path.dirname(filepath), { recursive: true });
   }
-
-  console.log('save to', filepath, data);
 
   fs.writeFileSync(filepath, JSON.stringify(data, null, 2), 'utf8');
 }

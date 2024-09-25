@@ -1,0 +1,152 @@
+[
+  {
+    "id": 21,
+    "url": "https://www.battlemetrics.com/players/1148694354",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1148694354\">kenai</a>",
+    "text": "kenai",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 26,
+    "url": "https://www.battlemetrics.com/players/1101999607",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1101999607\">DatSkidderBoi350</a>",
+    "text": "DatSkidderBoi350",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 25,
+    "url": "https://www.battlemetrics.com/players/975017615",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/975017615\">JayDubya108</a>",
+    "text": "JayDubya108",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 28,
+    "url": "https://www.battlemetrics.com/players/1156301688",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1156301688\">McLovin</a>",
+    "text": "McLovin",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 24,
+    "url": "https://www.battlemetrics.com/players/956064234",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/956064234\">verbitterung</a>",
+    "text": "verbitterung",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 23,
+    "url": "https://www.battlemetrics.com/players/976891510",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/976891510\">StonerJim</a>",
+    "text": "StonerJim",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 27,
+    "url": "https://www.battlemetrics.com/players/1149033829",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1149033829\">VesperSpecter</a>",
+    "text": "VesperSpecter",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 20,
+    "url": "https://www.battlemetrics.com/players/1094471550",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1094471550\">RTP | kamjot</a>",
+    "text": "RTP | kamjot",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 22,
+    "url": "https://www.battlemetrics.com/players/1151903619",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1151903619\">Mushy</a>",
+    "text": "Mushy",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  },
+  {
+    "id": 19,
+    "url": "https://www.battlemetrics.com/players/1175010047",
+    "html": "<a class=\"player-name css-fj458c\" href=\"/players/1175010047\">Cell7</a>",
+    "text": "Cell7",
+    "usage": {
+      "input": 3035,
+      "output": 70,
+      "total": 3105
+    },
+    "progress": {
+      "done": 0,
+      "total": 1
+    }
+  }
+]
