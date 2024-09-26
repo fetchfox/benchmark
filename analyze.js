@@ -223,7 +223,7 @@ const ais = [
   ['human'],
 
   ['openai:gpt-4o-mini'],
-  // ['openai:gpt-4o'],
+  ['openai:gpt-4o'],
   // ['openai:gpt-3.5-turbo'],
   // ['openai:gpt-4'],
   // ['openai:gpt-4-turbo'],
@@ -231,7 +231,7 @@ const ais = [
   // ['mistral:mistral-large-latest'],
 
   ['google:gemini-1.5-flash'],
-  // ['google:gemini-1.5-pro'],
+  ['google:gemini-1.5-pro'],
 
   // ['anthropic:claude-3-5-sonnet-20240620'],
   // ['anthropic:claude-3-haiku-20240307'],
@@ -253,16 +253,16 @@ const ais = [
 ];
 
 const extractors = [
-  // ['single-prompt'],
+  ['single-prompt'],
   // ['iterative-prompt'],
 
   // ['min', { extractor: getExtractor('iterative-prompt') }, 'min-ip'],
 
-  // ['min',
-  //  { minimizer: getMinimizer('tag-removing', { cache }),
-  //    extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
-  //  },
-  //  'tag-removing+single-prompt'],
+  ['min',
+   { minimizer: getMinimizer('tag-removing', { cache }),
+     extractorFn: (ai) => getExtractor('single-prompt', { ai, cache }),
+   },
+   'tag-removing+single-prompt'],
 
   ['min',
    { minimizer: getMinimizer('text-only', { cache }),
